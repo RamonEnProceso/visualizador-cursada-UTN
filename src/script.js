@@ -14,7 +14,6 @@ const careersData = {};
 const loadCareer = (name, file) => __awaiter(void 0, void 0, void 0, function* () {
     const curriculum = yield fetch(file);
     careersData[name] = yield curriculum.json();
-    careersData[name] = careersData[name];
     renderCareer(name);
     renderButtons();
 });
@@ -46,6 +45,7 @@ const renderCareer = (careerId) => {
             const div = document.createElement("div");
             div.textContent = subject.name;
             if (subject.electiva) {
+                //Acá debo poner para elegir la cantidad de electivas
                 div.textContent += "A elegir";
             }
             levelHtml.appendChild(div);
@@ -62,4 +62,4 @@ const renderButtons = () => {
         buttonContainer.appendChild(li);
     });
 };
-loadCareer("sistemas", "./ingenieria_sistemas.json");
+loadCareer("sistemas", "../data/ingenieria_sistemas.json");

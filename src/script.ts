@@ -93,4 +93,4 @@ const renderButtons = () =>{
 
 }
 
-loadCareer("sistemas","./ingenieria_sistemas.json");
+loadCareer("sistemas","../data/ingenieria_sistemas.json");
