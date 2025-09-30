@@ -1,0 +1,334 @@
+{
+    "name":"Sistemas de Información",
+    "levels":[
+        {
+        "name": "Primer año",
+        "subjects": [
+            {
+                "name":"Análisis Matemático I",
+                "id":"AM1",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":10,"academicHours":160},
+                            {"name":"Anual","weeklyHours":5,"academicHours":160}]
+            },
+            {
+                "name":"Álgebra y Geometría Analítica",
+                "id":"AGA",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":10,"academicHours":160},
+                            {"name":"Anual","weeklyHours":5,"academicHours":160}]
+            },
+            {
+                "name":"Física I",
+                "id":"F1",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":10,"academicHours":160},
+                            {"name":"Anual","weeklyHours":5,"academicHours":160}]
+            },
+            {
+                "name":"Ingeniería y Sociedad",
+                "id":"IyS",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":4,"academicHours":64}]
+            },
+            {
+                "name":"Lógica y Estructuras Discretas",
+                "id":"LyED",
+                "duration":[{"name":"Anual","weeklyHours":3,"academicHours":96}]
+            },
+            {
+                "name":"Algoritmos y Estructuras de Datos",
+                "id":"AyED",
+                "duration":[{"name":"Anual","weeklyHours":10,"academicHours":160}]
+            },
+            {
+                "name":"Arquitectura de Computadoras",
+                "id":"ADC",
+                "duration":[{"name":"Anual","weeklyHours":4,"academicHours":128}]
+            },
+            {
+                "name":"Sistemas y Procesos de Negocio",
+                "id":"SyPN",
+                "duration":[{"name":"Anual","weeklyHours":3,"academicHours":96}]
+            }
+        ]
+        },
+        {
+        "name": "Segundo año",
+        "subjects": [
+            {
+                "name":"Análisis Matemático II",
+                "id":"AM2",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":10,"academicHours":160},
+                            {"name":"Anual","weeklyHours":5,"academicHours":160}]
+            },
+            {
+                "name":"Física II",
+                "id":"F2",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":10,"academicHours":160},
+                            {"name":"Anual","weeklyHours":5,"academicHours":160}]
+            },
+            {
+                "name":"Probabilidad y Estadística",
+                "id":"PyE",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96},
+                            {"name":"Anual","weeklyHours":3,"academicHours":96}]
+            },
+            {
+                "name":"Inglés I",
+                "id":"I1",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":4,"academicHours":64}]
+            },
+            {
+                "name":"Sintaxis y Semántica de los Lenguajes",
+                "id":"SSL",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":8,"academicHours":128}]
+            },
+            {
+                "name":"Paradigmas de Programación",
+                "id":"PDP",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":8,"academicHours":128}]
+            },
+            {
+                "name":"Sistemas Operativos",
+                "id":"SO",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":4,"academicHours":128}]
+            },
+            {
+                "name":"Análisis de Sistemas de Información",
+                "id":"ADS",
+                "duration":[{"name":"Anual","weeklyHours":6,"academicHours":192}]
+            }
+        ]
+        },{
+        "name": "Tercer año",
+        "subjects": [
+            {
+                "name":"Economía",
+                "id":"ECO",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "name":"Base de Datos",
+                "id":"BD",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":8,"academicHours":128}]
+            },
+            {
+                "name":"Inglés II",
+                "id":"I2",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":4,"academicHours":64}]
+            },
+            {
+                "name":"Desarrollo de Software",
+                "id":"DSO",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":4,"academicHours":128}]
+            },
+            {
+                "name":"Comunicación de Datos",
+                "id":"CD",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":8,"academicHours":128}]
+            },
+            {
+                "name":"Redes de Datos",
+                "id":"RD",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":8,"academicHours":128}]
+            },
+            {
+                "name":"Diseño de Sistemas de Información",
+                "id":"DSI",
+                "duration":[{"name":"Anual","weeklyHours":6,"academicHours":192}]
+            },
+            {
+                "name":"Electivas 3º nivel",
+                "cantidad":1,
+                "electiva": true
+            }
+        ]
+        },       
+        {
+        "name": "Cuarto año",
+        "subjects": [
+            {
+                "name":"Legislación",
+                "id":"LEG",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":4,"academicHours":128}]
+            },
+            {
+                "name":"Ingeniería y Calidad de Software",
+                "id":"ICS",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "name":"Ciencia de Datos",
+                "id":"DAT",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":3,"academicHours":96}]
+            },
+            {
+                "name":"Análisis Numérico",
+                "id":"AN",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":3,"academicHours":96}]
+            },
+            {
+                "name":"Investigación Operativa",
+                "id":"IO",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":8,"academicHours":128}]
+            },
+            {
+                "name":"Simulación",
+                "id":"SIM",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":3,"academicHours":96}]
+            },
+            {
+                "name":"Tecnología para la Automatización",
+                "id":"TA",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "name":"Administración de Sistemas de Información",
+                "id":"ASI",
+                "duration":[{"name":"Anual","weeklyHours":6,"academicHours":192}]
+            },
+            {
+                "name":"Electivas 4º nivel",
+                "cantidad":2,
+                "electiva": true
+            }
+        ]
+        },
+        {
+        "name": "Quinto año",
+        "subjects": [
+            {
+                "name":"Inteligencia Artificial",
+                "id":"IA",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "name":"Sistemas de Gestión",
+                "id":"SG",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":8,"academicHours":128}]
+            },
+            {
+                "name":"Gestión General",
+                "id":"GG",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "name":"Seguridad en los Sistemas de Información",
+                "id":"SSI",
+                "duration":[{"name":"Cuatrimestral","weeklyHours":3,"academicHours":96}]
+            },
+            {
+                "name":"Proyecto Final",
+                "id":"Proyecto Final",
+                "duration":[{"name":"Anual","weeklyHours":6,"academicHours":192}]
+            },
+            {
+                "name":"Práctica Profesional Supervisada",
+                "id":"Práctica Supervisada",
+                "duration":[{"name":"Anual","weeklyHours":6,"academicHours":200}]
+            },
+            {
+                "name":"Electivas 5º nivel",
+                "cantidad":4,
+                "electiva": true
+            }
+        ]
+        },
+        {"name":"Electives",
+        "subjects":[
+            {
+                "id": "AECH",
+                "name": "Administración Estratégica del Capital Humano",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "CS",
+                "name": "Ciberseguridad",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "CGV",
+                "name": "Comunicación Gráfica y Visual",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "CI",
+                "name": "Creatividad e Innovación",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "CRP",
+                "name": "Criptografía",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "EUX",
+                "name": "Experiencia de Usuario y Accesibilidad",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "GPSI",
+                "name": "Gerenciamiento de Proyectos de Sistemas de Información",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "GTH",
+                "name": "Gestión del Talento Humano",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "IREQ",
+                "name": "Ingeniería de Requisitos",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "MIC",
+                "name": "Metodología de Investigación Científico-Tecnológica",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "MCE",
+                "name": "Metodología de la Conducción de Equipos de Trabajo",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "PA",
+                "name": "Patrones Algorítmicos",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "PLN",
+                "name": "Procesamiento del Lenguaje Natural",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "QA",
+                "name": "Química Ambiental",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "TAP",
+                "name": "Técnicas Avanzadas de Programación",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "TGC",
+                "name": "Técnicas de Gráficos por Computadora",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "TACS",
+                "name": "Tecnologías Avanzadas en la Construcción de Software",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "TET",
+                "name": "Tendencias y Escenarios Tecnológicos",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "TD",
+                "name": "Transformación Digital",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            }
+        ]
+        }
+    ]
+}

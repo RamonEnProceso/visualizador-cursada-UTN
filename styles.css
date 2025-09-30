@@ -1,0 +1,9 @@
+.table_of_contents_container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /*Modificar en Javascript*/
+    width: 100%;
+    background-color: aquamarine;
+}
+.content_column{
+    background-color: blueviolet;
+}
