@@ -1,7 +1,105 @@
 {
     "name":"Sistemas de Información",
     "levels":[
-        {
+        {"name":"Electives",
+        "subjects":[
+            {
+                "id": "AECH",
+                "name": "Administración Estratégica del Capital Humano",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "CS",
+                "name": "Ciberseguridad",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "CGV",
+                "name": "Comunicación Gráfica y Visual",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "CI",
+                "name": "Creatividad e Innovación",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "CRP",
+                "name": "Criptografía",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "EUX",
+                "name": "Experiencia de Usuario y Accesibilidad",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "GPSI",
+                "name": "Gerenciamiento de Proyectos de Sistemas de Información",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "GTH",
+                "name": "Gestión del Talento Humano",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "IREQ",
+                "name": "Ingeniería de Requisitos",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "MIC",
+                "name": "Metodología de Investigación Científico-Tecnológica",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "MCE",
+                "name": "Metodología de la Conducción de Equipos de Trabajo",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "PA",
+                "name": "Patrones Algorítmicos",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "PLN",
+                "name": "Procesamiento del Lenguaje Natural",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "QA",
+                "name": "Química Ambiental",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "TAP",
+                "name": "Técnicas Avanzadas de Programación",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "TGC",
+                "name": "Técnicas de Gráficos por Computadora",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "TACS",
+                "name": "Tecnologías Avanzadas en la Construcción de Software",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "TET",
+                "name": "Tendencias y Escenarios Tecnológicos",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            },
+            {
+                "id": "TD",
+                "name": "Transformación Digital",
+                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+            }
+        ]
+        },{
         "name": "Primer año",
         "subjects": [
             {
@@ -136,8 +234,9 @@
             },
             {
                 "name":"Electivas 3º nivel",
-                "cantidad":1,
-                "electiva": true
+                "number":1,
+                "elective": true,
+                "id": "E3"
             }
         ]
         },       
@@ -186,8 +285,9 @@
             },
             {
                 "name":"Electivas 4º nivel",
-                "cantidad":2,
-                "electiva": true
+                "number": 2,
+                "elective": true,
+                "id":"E4"
             }
         ]
         },
@@ -226,107 +326,9 @@
             },
             {
                 "name":"Electivas 5º nivel",
-                "cantidad":4,
-                "electiva": true
-            }
-        ]
-        },
-        {"name":"Electives",
-        "subjects":[
-            {
-                "id": "AECH",
-                "name": "Administración Estratégica del Capital Humano",
-                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
-            },
-            {
-                "id": "CS",
-                "name": "Ciberseguridad",
-                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
-            },
-            {
-                "id": "CGV",
-                "name": "Comunicación Gráfica y Visual",
-                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
-            },
-            {
-                "id": "CI",
-                "name": "Creatividad e Innovación",
-                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
-            },
-            {
-                "id": "CRP",
-                "name": "Criptografía",
-                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
-            },
-            {
-                "id": "EUX",
-                "name": "Experiencia de Usuario y Accesibilidad",
-                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
-            },
-            {
-                "id": "GPSI",
-                "name": "Gerenciamiento de Proyectos de Sistemas de Información",
-                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
-            },
-            {
-                "id": "GTH",
-                "name": "Gestión del Talento Humano",
-                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
-            },
-            {
-                "id": "IREQ",
-                "name": "Ingeniería de Requisitos",
-                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
-            },
-            {
-                "id": "MIC",
-                "name": "Metodología de Investigación Científico-Tecnológica",
-                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
-            },
-            {
-                "id": "MCE",
-                "name": "Metodología de la Conducción de Equipos de Trabajo",
-                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
-            },
-            {
-                "id": "PA",
-                "name": "Patrones Algorítmicos",
-                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
-            },
-            {
-                "id": "PLN",
-                "name": "Procesamiento del Lenguaje Natural",
-                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
-            },
-            {
-                "id": "QA",
-                "name": "Química Ambiental",
-                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
-            },
-            {
-                "id": "TAP",
-                "name": "Técnicas Avanzadas de Programación",
-                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
-            },
-            {
-                "id": "TGC",
-                "name": "Técnicas de Gráficos por Computadora",
-                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
-            },
-            {
-                "id": "TACS",
-                "name": "Tecnologías Avanzadas en la Construcción de Software",
-                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
-            },
-            {
-                "id": "TET",
-                "name": "Tendencias y Escenarios Tecnológicos",
-                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
-            },
-            {
-                "id": "TD",
-                "name": "Transformación Digital",
-                "duration": [{"name":"Cuatrimestral","weeklyHours":6,"academicHours":96}]
+                "number":4,
+                "elective": true,
+                "id": "E5"
             }
         ]
         }
