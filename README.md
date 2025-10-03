@@ -14,7 +14,7 @@ La idea es que el usuario pueda **marcar materias como "Cursadas" o "Aprobadas"*
 - ✅ Lectura de archivo JSON
 - ✅ Renderizado de materias en pantalla organizadas por niveles
 - ✅ Botones de selección de carrera
-- 🔄 Próximo paso: Agregar botones *Cursado / Aprobado* para cada materia
+- ✅ Agregar botones *Cursado / Aprobado* para cada materia
 - 🔄 Próximo paso: Agregar más carreras
 
 ## 🎯 Objetivo
