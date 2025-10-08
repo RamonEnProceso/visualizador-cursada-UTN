@@ -1,0 +1,291 @@
+{
+    "name": "Química",
+    "levels": [
+        {
+            "name": "Electives",
+            "subjects": [
+                {
+                    "id": "GC",
+                    "name": "Gestión de la Calidad",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 5, "academicHours": 80}]
+                },
+                {
+                    "id": "EIQ",
+                    "name": "Electrónica para Ingeniería Química",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 5, "academicHours": 80}]
+                },
+                {
+                    "id": "RAN",
+                    "name": "Radioquímica y Aplicaciones Nucleares",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 5, "academicHours": 80}]
+                },
+                {
+                    "id": "CEF",
+                    "name": "Cálculo por Elementos Finitos",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 5, "academicHours": 80}]
+                },
+                {
+                    "id": "IEP",
+                    "name": "Instalaciones Eléctricas de Planta",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                },
+                {
+                    "id": "AOV",
+                    "name": "Alimentos de Origen Vegetal",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 5, "academicHours": 80}]
+                },
+                {
+                    "id": "EA",
+                    "name": "Electroquímica Aplicada",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                },
+                {
+                    "id": "TFE",
+                    "name": "Tratamiento Fisicoquímico de Efluentes",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                },
+                {
+                    "id": "IAS",
+                    "name": "Ingeniería Ambiental y Sustentabilidad",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                }
+            ]
+        },
+        {
+            "name": "Primer año",
+            "subjects": [
+                {
+                    "name": "Introducción a la Ingeniería Química",
+                    "id": "IIQ",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Sistemas de Representación",
+                    "id": "SR",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "name": "Inglés I",
+                    "id": "I1",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "name": "Ingeniería y Sociedad",
+                    "id": "IyS",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                },
+                {
+                    "name": "Álgebra y Geometría Analítica",
+                    "id": "AGA",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 10, "academicHours": 160}]
+                },
+                {
+                    "name": "Análisis Matemático I",
+                    "id": "AM1",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 10, "academicHours": 160}]
+                },
+                {
+                    "name": "Análisis Matemático II",
+                    "id": "AM2",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 10, "academicHours": 160}]
+                },
+                {
+                    "name": "Química",
+                    "id": "Q",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 10, "academicHours": 160}]
+                },
+                {
+                    "name": "Fundamentos de Informática",
+                    "id": "FI",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                }
+            ]
+        },
+        {
+            "name": "Segundo año",
+            "subjects": [
+                {
+                    "name": "Introducción a Equipos y Procesos",
+                    "id": "IEP",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Química Orgánica",
+                    "id": "QO",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Química Inorgánica",
+                    "id": "QI",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 8, "academicHours": 128}]
+                },
+                {
+                    "name": "Inglés II",
+                    "id": "I2",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                },
+                {
+                    "name": "Física I",
+                    "id": "F1",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 10, "academicHours": 160}]
+                },
+                {
+                    "name": "Probabilidad y Estadística",
+                    "id": "PyE",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 6, "academicHours": 96}]
+                },
+                {
+                    "name": "Física II",
+                    "id": "F2",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 10, "academicHours": 160}]
+                },
+                {
+                    "name": "Matemática Superior Aplicada",
+                    "id": "MSA",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 6, "academicHours": 96}]
+                }
+            ]
+        },
+        {
+            "name": "Tercer año",
+            "subjects": [
+                {
+                    "name": "Balance de Masa y Energía",
+                    "id": "BME",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Economía",
+                    "id": "ECO",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Química Aplicada",
+                    "id": "QA",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "name": "Termodinámica",
+                    "id": "TER",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 8, "academicHours": 128}]
+                },
+                {
+                    "name": "Ciencia de los Materiales",
+                    "id": "CM",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                },
+                {
+                    "name": "Química Analítica",
+                    "id": "QAN",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 8, "academicHours": 128}]
+                },
+                {
+                    "name": "Microbiología y Química Biológica",
+                    "id": "MQB",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 6, "academicHours": 96}]
+                },
+                {
+                    "name": "Fisicoquímica",
+                    "id": "FQ",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 8, "academicHours": 128}]
+                },
+                {
+                    "name": "Legislación",
+                    "id": "LEG",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                },
+                {
+                    "name": "Fenómenos de Transporte",
+                    "id": "FT",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 10, "academicHours": 160}]
+                }
+            ]
+        },
+        {
+            "name": "Cuarto año",
+            "subjects": [
+                {
+                    "name": "Diseño, Simulación, Optimización y Seguridad de Procesos",
+                    "id": "DSOSP",
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}]
+                },
+                {
+                    "name": "Operaciones Unitarias I",
+                    "id": "OU1",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 10, "academicHours": 160}]
+                },
+                {
+                    "name": "Tecnología de la Energía Térmica",
+                    "id": "TET",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 10, "academicHours": 160}]
+                },
+                {
+                    "name": "Organización Industrial",
+                    "id": "OI",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 6, "academicHours": 96}]
+                },
+                {
+                    "name": "Ingeniería de las Reacciones Químicas",
+                    "id": "IRC",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 10, "academicHours": 160}]
+                },
+                {
+                    "name": "Operaciones Unitarias II",
+                    "id": "OU2",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 10, "academicHours": 160}]
+                },
+                {
+                    "name": "Mecánica Industrial",
+                    "id": "MI",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 6, "academicHours": 96}]
+                }
+            ]
+        },
+        {
+            "name": "Quinto año",
+            "subjects": [
+                {
+                    "name": "Proyecto Final",
+                    "id": "PF",
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}]
+                },
+                {
+                    "name": "Procesos Biotecnológicos",
+                    "id": "PB",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 6, "academicHours": 96}]
+                },
+                {
+                    "name": "Control Automático de Procesos",
+                    "id": "CAP",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 8, "academicHours": 128}]
+                },
+                {
+                    "name": "Máquinas e Instalaciones Eléctricas",
+                    "id": "MIE",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                },
+                {
+                    "name": "Calidad y Control Estadístico de Procesos",
+                    "id": "CCEP",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 6, "academicHours": 96}]
+                },
+                {
+                    "name": "Ingeniería Ambiental",
+                    "id": "IA",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 6, "academicHours": 96}]
+                },
+                {
+                    "name": "Higiene y Seguridad en el Trabajo",
+                    "id": "HST",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                },
+                {
+                    "name": "Electivas",
+                    "number": 2,
+                    "elective": true,
+                    "id": "ELECT"
+                }
+            ]
+        }
+    ]
+}

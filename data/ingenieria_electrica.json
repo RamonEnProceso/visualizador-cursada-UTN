@@ -1,0 +1,256 @@
+{
+    "name": "Energía Eléctrica",
+    "levels": [
+        {
+            "name": "Electives",
+            "subjects": [
+                {
+                    "id": "INST",
+                    "name": "Instrumentación",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 5, "academicHours": 80}]
+                },
+                {
+                    "id": "ER1",
+                    "name": "Energías Renovables 1",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 5, "academicHours": 80}]
+                },
+                {
+                    "id": "PCSE",
+                    "name": "Protección y Control de Sistemas Eléctricos",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 5, "academicHours": 80}]
+                },
+                {
+                    "id": "RI",
+                    "name": "Redes Inteligentes",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 5, "academicHours": 80}]
+                }
+            ]
+        },
+        {
+            "name": "Primer año",
+            "subjects": [
+                {
+                    "name": "Análisis Matemático I",
+                    "id": "AM1",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Álgebra y Geometría Analítica",
+                    "id": "AGA",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Ingeniería y Sociedad",
+                    "id": "IyS",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "name": "Sistemas de Representación",
+                    "id": "SR",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Física I",
+                    "id": "F1",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Química General",
+                    "id": "QG",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Integración Eléctrica I",
+                    "id": "IE1",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Fundamentos de Informática",
+                    "id": "FI",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                }
+            ]
+        },
+        {
+            "name": "Segundo año",
+            "subjects": [
+                {
+                    "name": "Física II",
+                    "id": "F2",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Probabilidad y Estadística",
+                    "id": "PyE",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Electrotecnia I",
+                    "id": "ET1",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Estabilidad",
+                    "id": "EST",
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}]
+                },
+                {
+                    "name": "Mecánica Técnica",
+                    "id": "MT",
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}]
+                },
+                {
+                    "name": "Integración Eléctrica II",
+                    "id": "IE2",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Inglés I",
+                    "id": "I1",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "name": "Análisis Matemático II",
+                    "id": "AM2",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                }
+            ]
+        },
+        {
+            "name": "Tercer año",
+            "subjects": [
+                {
+                    "name": "Cálculo Numérico",
+                    "id": "CN",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "name": "Tecnología y Ensayos de Materiales Eléctricos",
+                    "id": "TEME",
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}]
+                },
+                {
+                    "name": "Instrumentos y Mediciones Eléctricas",
+                    "id": "IME",
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}]
+                },
+                {
+                    "name": "Teoría de los Campos",
+                    "id": "TC",
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}]
+                },
+                {
+                    "name": "Física III",
+                    "id": "F3",
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}]
+                },
+                {
+                    "name": "Máquinas Eléctricas I",
+                    "id": "ME1",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Electrotecnia II",
+                    "id": "ET2",
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}]
+                },
+                {
+                    "name": "Termodinámica",
+                    "id": "TER",
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}]
+                }
+            ]
+        },
+        {
+            "name": "Cuarto año",
+            "subjects": [
+                {
+                    "name": "Fundamentos para el Análisis de Señales",
+                    "id": "FAS",
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}]
+                },
+                {
+                    "name": "Inglés II",
+                    "id": "I2",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "name": "Economía",
+                    "id": "ECO",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Electrónica I",
+                    "id": "EL1",
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}]
+                },
+                {
+                    "name": "Máquinas Eléctricas II",
+                    "id": "ME2",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Seguridad, Riesgo Eléctrico y Medio Ambiente",
+                    "id": "SREMA",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Instalaciones Eléctricas y Luminotecnia",
+                    "id": "IEL",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Control Automático",
+                    "id": "CA",
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}]
+                }
+            ]
+        },
+        {
+            "name": "Quinto año",
+            "subjects": [
+                {
+                    "name": "Máquinas Térmicas, Hidráulicas y de Fluidos",
+                    "id": "MTHF",
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}]
+                },
+                {
+                    "name": "Legislación",
+                    "id": "LEG",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "name": "Electrónica II",
+                    "id": "EL2",
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}]
+                },
+                {
+                    "name": "Generación, Transmisión y Distribución de la E.E.",
+                    "id": "GTDEE",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Sistemas de Potencia",
+                    "id": "SP",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Proyecto Final",
+                    "id": "PF",
+                    "duration": [{"name": "Anual", "weeklyHours": 6, "academicHours": 192}]
+                },
+                {
+                    "name": "Práctica Profesional Supervisada",
+                    "id": "PPS",
+                    "duration": [{"name": "Anual", "weeklyHours": 6, "academicHours": 200}]
+                },
+                {
+                    "name": "Electivas",
+                    "number": 2,
+                    "elective": true,
+                    "id": "ELECT"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,316 @@
+{
+    "name": "Electrónica",
+    "levels": [
+        {
+            "name": "Electives",
+            "subjects": [
+                {
+                    "id": "AA",
+                    "name": "Aprendizaje Automático",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                },
+                {
+                    "id": "AUTIND",
+                    "name": "Automatización Industrial",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                },
+                {
+                    "id": "AVION",
+                    "name": "Aviónica Digital para la Navegación Aérea",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                },
+                {
+                    "id": "APPMOV",
+                    "name": "Desarrollo de Aplicaciones para Dispositivos Móviles",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                },
+                {
+                    "id": "ANTENAS",
+                    "name": "Diseño y Simulación de Antenas",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                },
+                {
+                    "id": "EAUTO",
+                    "name": "Electrónica Aplicada al Automotor",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                },
+                {
+                    "id": "PCBS",
+                    "name": "Introducción al Diseño de Circuitos Impresos",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                },
+                {
+                    "id": "VLSI",
+                    "name": "Introducción al Diseño de VLSI",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                },
+                {
+                    "id": "IA",
+                    "name": "Introducción a la Inteligencia Artificial",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                },
+                {
+                    "id": "PDS",
+                    "name": "Procesamiento Digital de Señales",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                },
+                {
+                    "id": "WAN",
+                    "name": "Protocolos de Redes WAN",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                },
+                {
+                    "id": "RCONV",
+                    "name": "Redes Convergentes",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                },
+                {
+                    "id": "LAN",
+                    "name": "Redes LAN",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                },
+                {
+                    "id": "ROBOT",
+                    "name": "Robótica",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                },
+                {
+                    "id": "TVAV",
+                    "name": "Sist. Avanzados de TV y Tec. Audiovis.",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                },
+                {
+                    "id": "SDR",
+                    "name": "Software-Defined Radio",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                }
+            ]
+        },
+        {
+            "name": "Primer año",
+            "subjects": [
+                {
+                    "name": "Informática I",
+                    "id": "INF1",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}]
+                },
+                {
+                    "name": "Álgebra y Geometría Analítica",
+                    "id": "AGA",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 10, "academicHours": 160}]
+                },
+                {
+                    "name": "Análisis Matemático I",
+                    "id": "AM1",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 10, "academicHours": 160}]
+                },
+                {
+                    "name": "Ingeniería y Sociedad",
+                    "id": "IyS",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                },
+                {
+                    "name": "Análisis Matemático II",
+                    "id": "AM2",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 10, "academicHours": 160}]
+                },
+                {
+                    "name": "Física I",
+                    "id": "F1",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 10, "academicHours": 160}]
+                },
+                {
+                    "name": "Sistemas de Representación",
+                    "id": "SR",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 6, "academicHours": 96}]
+                }
+            ]
+        },
+        {
+            "name": "Segundo año",
+            "subjects": [
+                {
+                    "name": "Informática II",
+                    "id": "INF2",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}]
+                },
+                {
+                    "name": "Análisis de Señales y Sistemas",
+                    "id": "ASS",
+                    "duration": [{"name": "Anual", "weeklyHours": 6, "academicHours": 144}]
+                },
+                {
+                    "name": "Química General",
+                    "id": "QG",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 10, "academicHours": 160}]
+                },
+                {
+                    "name": "Física II",
+                    "id": "F2",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 10, "academicHours": 160}]
+                },
+                {
+                    "name": "Probabilidad y Estadística",
+                    "id": "PyE",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 6, "academicHours": 96}]
+                },
+                {
+                    "name": "Física Electrónica",
+                    "id": "FE",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 10, "academicHours": 160}]
+                },
+                {
+                    "name": "Inglés I",
+                    "id": "I1",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                }
+            ]
+        },
+        {
+            "name": "Tercer año",
+            "subjects": [
+                {
+                    "name": "Teoría de los Circuitos I",
+                    "id": "TC1",
+                    "duration": [{"name": "Anual", "weeklyHours": 6, "academicHours": 144}]
+                },
+                {
+                    "name": "Técnicas Digitales I",
+                    "id": "TD1",
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}]
+                },
+                {
+                    "name": "Dispositivos Electrónicos",
+                    "id": "DE",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 10, "academicHours": 160}]
+                },
+                {
+                    "name": "Legislación",
+                    "id": "LEG",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                },
+                {
+                    "name": "Electrónica Aplicada",
+                    "id": "EA1",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 10, "academicHours": 160}]
+                },
+                {
+                    "name": "Medios de Enlace",
+                    "id": "ME",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 8, "academicHours": 128}]
+                },
+                {
+                    "name": "Inglés II",
+                    "id": "I2",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                }
+            ]
+        },
+        {
+            "name": "Cuarto año",
+            "subjects": [
+                {
+                    "name": "Técnicas Digitales II",
+                    "id": "TD2",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}]
+                },
+                {
+                    "name": "Medidas Electrónicas I",
+                    "id": "ME1",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 10, "academicHours": 160}]
+                },
+                {
+                    "name": "Teoría de los Circuitos II",
+                    "id": "TC2",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 10, "academicHours": 160}]
+                },
+                {
+                    "name": "Máquinas e Instalaciones Eléctricas",
+                    "id": "MIE",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 8, "academicHours": 128}]
+                },
+                {
+                    "name": "Sistemas de Comunicaciones",
+                    "id": "SC",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 8, "academicHours": 128}]
+                },
+                {
+                    "name": "Electrónica Aplicada II",
+                    "id": "EA2",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}]
+                },
+                {
+                    "name": "Seguridad, Higiene y Medio Ambiente",
+                    "id": "SHMA",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 4, "academicHours": 64}]
+                }
+            ]
+        },
+        {
+            "name": "Quinto año",
+            "subjects": [
+                {
+                    "name": "Técnicas Digitales III",
+                    "id": "TD3",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}]
+                },
+                {
+                    "name": "Medidas Electrónicas II",
+                    "id": "ME2",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}]
+                },
+                {
+                    "name": "Sistemas de Control",
+                    "id": "SISC",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 8, "academicHours": 128}]
+                },
+                {
+                    "name": "Electrónica Aplicada III",
+                    "id": "EA3",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 10, "academicHours": 160}]
+                },
+                {
+                    "name": "Tecnología Electrónica",
+                    "id": "TE",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 10, "academicHours": 160}]
+                },
+                {
+                    "name": "Electrónica de Potencia",
+                    "id": "EP",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 8, "academicHours": 128}]
+                },
+                {
+                    "name": "Organización Industrial",
+                    "id": "OI",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 48}]
+                }
+            ]
+        },
+        {
+            "name": "Sexto año",
+            "subjects": [
+                {
+                    "name": "Economía",
+                    "id": "ECO",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 6, "academicHours": 96}]
+                },
+                {
+                    "name": "Proyecto Final",
+                    "id": "PF",
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 8, "academicHours": 128}]
+                },
+                {
+                    "name": "Práctica Profesional Supervisada",
+                    "id": "PPS",
+                    "duration": [{"name": "Anual", "weeklyHours": 6, "academicHours": 200}]
+                },
+                {
+                    "name": "Electivas",
+                    "number": 6,
+                    "elective": true,
+                    "id": "ELECT"
+                }
+            ]
+        }
+    ]
+}

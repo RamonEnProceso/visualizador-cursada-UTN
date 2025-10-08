@@ -106,19 +106,22 @@
                 "name":"Análisis Matemático I",
                 "id":"AM1",
                 "duration":[{"name":"Cuatrimestral","weeklyHours":10,"academicHours":160},
-                            {"name":"Anual","weeklyHours":5,"academicHours":160}]
+                            {"name":"Anual","weeklyHours":5,"academicHours":160}],
+                "url":"https://frba.utn.edu.ar/wp-content/uploads/2023/10/Programa-Analisis-Matematico-I.pdf"
             },
             {
                 "name":"Álgebra y Geometría Analítica",
                 "id":"AGA",
                 "duration":[{"name":"Cuatrimestral","weeklyHours":10,"academicHours":160},
-                            {"name":"Anual","weeklyHours":5,"academicHours":160}]
+                            {"name":"Anual","weeklyHours":5,"academicHours":160}],
+                "url":"https://frba.utn.edu.ar/wp-content/uploads/2023/10/Programa-Algebra-y-Geometria-Analitica.pdf"
             },
             {
                 "name":"Física I",
                 "id":"F1",
                 "duration":[{"name":"Cuatrimestral","weeklyHours":10,"academicHours":160},
-                            {"name":"Anual","weeklyHours":5,"academicHours":160}]
+                            {"name":"Anual","weeklyHours":5,"academicHours":160}],
+                "url":"https://frba.utn.edu.ar/wp-content/uploads/2017/06/Programa_Fisica_I_2010.pdf"
             },
             {
                 "name":"Ingeniería y Sociedad",

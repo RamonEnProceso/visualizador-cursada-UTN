@@ -1,0 +1,304 @@
+{
+    "name": "Naval",
+    "levels": [
+        {
+            "name": "Electives",
+            "subjects": [
+                {
+                    "id": "NAVEG",
+                    "name": "Navegación",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "id": "BMIL",
+                    "name": "Buques Militares",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "id": "MODPROC",
+                    "name": "Modelización de Procesos",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "id": "DNA",
+                    "name": "Diseño Naval Asistido",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                }
+            ]
+        },
+        {
+            "name": "Primer año",
+            "subjects": [
+                {
+                    "name": "Álgebra y Geometría Analítica",
+                    "id": "AGA",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Análisis Matemático I",
+                    "id": "AM1",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Física I",
+                    "id": "F1",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Química General",
+                    "id": "QG",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Introducción a la Ingeniería Naval",
+                    "id": "IIN",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Sistemas de Representación",
+                    "id": "SR",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Inglés I",
+                    "id": "I1",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "name": "Fundamentos de Informática",
+                    "id": "FI",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "name": "Electivas 1er año",
+                    "number": 1,
+                    "elective": true,
+                    "id": "E1"
+                }
+            ]
+        },
+        {
+            "name": "Segundo año",
+            "subjects": [
+                {
+                    "name": "Análisis Matemático II",
+                    "id": "AM2",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Probabilidad y Estadística",
+                    "id": "PyE",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Física II",
+                    "id": "F2",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Física III",
+                    "id": "F3",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "name": "Análisis Estructural I",
+                    "id": "AE1",
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}]
+                },
+                {
+                    "name": "Ingeniería y Sociedad",
+                    "id": "IyS",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "name": "Dibujo Naval",
+                    "id": "DN",
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}]
+                },
+                {
+                    "name": "Legislación",
+                    "id": "LEG",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "name": "Electivas 2do año",
+                    "number": 1,
+                    "elective": true,
+                    "id": "E2"
+                }
+            ]
+        },
+        {
+            "name": "Tercer año",
+            "subjects": [
+                {
+                    "name": "Análisis Estructural II",
+                    "id": "AE2",
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}]
+                },
+                {
+                    "name": "Termodinámica",
+                    "id": "TER",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Mecánica Racional",
+                    "id": "MR",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Teoría del Buque I",
+                    "id": "TB1",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Matemática Aplicada a la Ingeniería",
+                    "id": "MAI",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Electrotecnia y Máquinas Eléctricas",
+                    "id": "EME",
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 120}]
+                },
+                {
+                    "name": "Mecánica de los Fluidos",
+                    "id": "MF",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                }
+            ]
+        },
+        {
+            "name": "Cuarto año",
+            "subjects": [
+                {
+                    "name": "Teoría del Buque II",
+                    "id": "TB2",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Elementos de Buques",
+                    "id": "EB",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Análisis Estructural III",
+                    "id": "AE3",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Máquinas Alternativas y Turbomáquinas",
+                    "id": "MAT",
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 120}]
+                },
+                {
+                    "name": "Materiales Navales",
+                    "id": "MN",
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 120}]
+                },
+                {
+                    "name": "Construcción Naval",
+                    "id": "CN",
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 120}]
+                },
+                {
+                    "name": "Actividad Naviera",
+                    "id": "AN",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "name": "Inglés II",
+                    "id": "I2",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "name": "Electivas 4to año",
+                    "number": 1,
+                    "elective": true,
+                    "id": "E4"
+                }
+            ]
+        },
+        {
+            "name": "Quinto año",
+            "subjects": [
+                {
+                    "name": "Plantas Eléctricas Navales",
+                    "id": "PEN",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "name": "Plantas Propulsoras Navales",
+                    "id": "PPN",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Cálculo de Estructuras de Buques",
+                    "id": "CEB",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Mecánica Aplicada a las Máquinas",
+                    "id": "MAM",
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 120}]
+                },
+                {
+                    "name": "Proyecto de Buques",
+                    "id": "PB",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Organización Industrial",
+                    "id": "OI",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "name": "Soldadura",
+                    "id": "SOL",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Análisis por Elementos Finitos",
+                    "id": "AEF",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Electivas 5to año",
+                    "number": 2,
+                    "elective": true,
+                    "id": "E5"
+                }
+            ]
+        },
+        {
+            "name": "Sexto año",
+            "subjects": [
+                {
+                    "name": "Proyecto Final",
+                    "id": "PF",
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}]
+                },
+                {
+                    "name": "Embarcaciones Veloces",
+                    "id": "EV",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Procedimientos de Astilleros",
+                    "id": "PA",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Seguridad, Higiene e Ingeniería Ambiental",
+                    "id": "SHIA",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "name": "Práctica Profesional Supervisada",
+                    "id": "PPS",
+                    "duration": [{"name": "Anual", "weeklyHours": 8, "academicHours": 247}]
+                }
+            ]
+        }
+    ]
+}

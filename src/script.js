@@ -10,9 +10,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 const buttonContainer = document.getElementById("button_careers_container");
 const tableContainer = document.getElementById("table_of_contents_container");
+const nameContainer = document.getElementById("career-name");
 const inputButtonOff = document.getElementById("buttons-off");
 const inputOnlyCoursed = document.getElementById("only-coursed");
 const inputDarkNotApproved = document.getElementById("dark-not-approved");
+const careerOrder = ["textil", "naval", "quimica", "electrica", "electronica", "civil", "mecanica", "industrial", "sistemas"];
 const careersData = {};
 const approvedSubjects = {};
 const coursedSubjects = {};
@@ -27,19 +29,18 @@ const renderCareer = (careerId) => {
     const career = careersData[careerId];
     if (!career)
         return;
-    console.log(`Se ha cargado correctamente la carrera de ${careersData[careerId]["name"]}`);
-    console.log(careersData[careerId]);
+    nameContainer.textContent = careersData[careerId]["name"];
     //Hasta acá, lee el objeto de la carrera correspondiente 
     tableContainer.innerHTML = "";
     const careerLevels = careersData[careerId]["levels"];
     let numLevels = 0;
-    //Creo el select de las diferentes electivas
+    //Crea el select de las diferentes electivas
     const electivesSelect = document.createElement("select");
     electivesSelect.name = "elective";
     electivesSelect.id = "elective-select";
     careerLevels.forEach((level) => {
         const levelName = level.name;
-        //Itero entre materias y lo coloco en el select
+        //Itero entre materias electivas y lo coloco en el select
         if (levelName == "Electives") {
             level.subjects.forEach((subject) => {
                 const option = document.createElement("option");
@@ -49,6 +50,7 @@ const renderCareer = (careerId) => {
             });
             return;
         }
+        //Acá se crea la columna y el header
         const levelHtml = document.createElement("div");
         const headerHtml = document.createElement("div");
         headerHtml.textContent = levelName;
@@ -56,10 +58,9 @@ const renderCareer = (careerId) => {
         levelHtml.appendChild(headerHtml);
         numLevels++;
         levelHtml.className = "content_column";
-        //Acá se crea "el header" de la columna
         let electiveNumber = 0;
+        //Acá se crean las distintas materias
         level.subjects.forEach((subject) => {
-            //Acá se crean las distintas materias
             const div = document.createElement("div");
             const divSpan = document.createElement("span");
             divSpan.textContent = subject.name;
@@ -98,7 +99,7 @@ const renderCareer = (careerId) => {
                 });
                 const approvedLabel = document.createElement("label");
                 approvedLabel.textContent = "Aprobado";
-                approvedLabel.className = "checkboxLabel";
+                approvedLabel.className = "checkbox_label";
                 approvedLabel.htmlFor = `${id}-approved`;
                 const coursedCheck = document.createElement("input");
                 coursedCheck.type = "checkbox";
@@ -106,7 +107,7 @@ const renderCareer = (careerId) => {
                 coursedCheck.className = "checkbox";
                 const coursedLabel = document.createElement("label");
                 coursedLabel.textContent = "Cursado";
-                coursedLabel.className = "checkboxLabel";
+                coursedLabel.className = "checkbox_label";
                 coursedLabel.htmlFor = `${id}-coursed`;
                 coursedSubjects[id] = coursedCheck.checked;
                 coursedCheck.addEventListener("change", () => {
@@ -150,6 +151,7 @@ const renderCareer = (careerId) => {
                         const electiveName = document.createElement("span");
                         electiveName.className = "elective_name";
                         electiveName.textContent = (electiveOptionName === null || electiveOptionName === void 0 ? void 0 : electiveOptionName.textContent) || "";
+                        div.style.padding = "0";
                         divSpan.style.display = "none";
                         divElective.appendChild(electiveName);
                         createCheckboxes(divElective, chosen);
@@ -170,13 +172,22 @@ const renderButtons = () => {
     buttonContainer.innerHTML = "";
     Object.keys(careersData).forEach((careerKey) => {
         const li = document.createElement("li");
-        li.textContent = careersData[careerKey]["name"];
+        const ck = document.createElement("input");
+        ck.type = "checkbox";
+        ck.id = careerKey;
+        ck.className = "career_checkbox";
+        const lb = document.createElement("label");
+        lb.textContent = careersData[careerKey]["name"];
+        lb.htmlFor = careerKey;
+        lb.className = "career_label";
         li.addEventListener("click", () => { renderCareer(careerKey); });
+        li.appendChild(ck);
+        li.appendChild(lb);
         buttonContainer.appendChild(li);
     });
 };
 const buttonOff = () => {
-    const inputCheckboxes = document.querySelectorAll(".checkboxLabel");
+    const inputCheckboxes = document.querySelectorAll(".checkbox_label");
     const selectSubject = document.querySelectorAll(".subject_select");
     inputCheckboxes.forEach(cb => {
         if (cb.style.display === "none") {
@@ -217,6 +228,11 @@ const darkNotApproved = () => {
         }
     });
 };
+const careerButtonsRender = () => __awaiter(void 0, void 0, void 0, function* () {
+    for (const career of careerOrder) {
+        yield loadCareer(career, `../data/ingenieria_${career}.json`);
+    }
+});
 inputButtonOff.addEventListener("change", () => {
     buttonOff();
 });
@@ -226,4 +242,4 @@ inputOnlyCoursed.addEventListener("change", () => {
 inputDarkNotApproved.addEventListener("change", () => {
     darkNotApproved();
 });
-loadCareer("sistemas", "../data/ingenieria_sistemas.json");
+careerButtonsRender();

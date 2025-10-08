@@ -1,0 +1,241 @@
+{
+    "name": "Textil",
+    "levels": [
+        {
+            "name": "Electives",
+            "subjects": [
+                {
+                    "id": "GDI",
+                    "name": "Gestión del Diseño y la Innovación",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "id": "OI",
+                    "name": "Organización Industrial",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "id": "PPTI",
+                    "name": "Procesos y Productos Textiles Innovadores",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "id": "GI",
+                    "name": "Gerenciamiento Industrial",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                }
+            ]
+        },
+        {
+            "name": "Primer año",
+            "subjects": [
+                {
+                    "name": "Análisis Matemático I",
+                    "id": "AM1",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Álgebra y Geometría Analítica",
+                    "id": "AGA",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Ingeniería y Sociedad",
+                    "id": "IyS",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "name": "Física I",
+                    "id": "F1",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Inglés I",
+                    "id": "I1",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "name": "Química General",
+                    "id": "QG",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Introducción a la Industria Textil",
+                    "id": "IIT",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                }
+            ]
+        },
+        {
+            "name": "Segundo año",
+            "subjects": [
+                {
+                    "name": "Análisis Matemático II",
+                    "id": "AM2",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Física II",
+                    "id": "F2",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Probabilidad y Estadística",
+                    "id": "PyE",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Fundamentos de Química Orgánica y Analítica",
+                    "id": "FQOA",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Sistemas de Representación",
+                    "id": "SR",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Inglés II",
+                    "id": "I2",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "name": "Diseño I",
+                    "id": "D1",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Fibras Textiles",
+                    "id": "FT",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                }
+            ]
+        },
+        {
+            "name": "Tercer año",
+            "subjects": [
+                {
+                    "name": "Cálculo Numérico",
+                    "id": "CN",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "name": "Fundamentos de Informática Textil",
+                    "id": "FIT",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Fundamentos Eléctricos y Mecánicos",
+                    "id": "FEM",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Diseño II",
+                    "id": "D2",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Química Textil",
+                    "id": "QT",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Hilandería de Lana",
+                    "id": "HL",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Termodinámica",
+                    "id": "TER",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Hilandería de Algodón",
+                    "id": "HA",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                }
+            ]
+        },
+        {
+            "name": "Cuarto año",
+            "subjects": [
+                {
+                    "name": "Legislación",
+                    "id": "LEG",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "name": "Economía",
+                    "id": "ECO",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Seguridad e Higiene Industrial",
+                    "id": "SHI",
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                },
+                {
+                    "name": "Gestión de Calidad e Ingeniería Ambiental",
+                    "id": "GCIA",
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                },
+                {
+                    "name": "Tejeduría de Punto y sus Ligamentos",
+                    "id": "TPL",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Tintorería y Estampado",
+                    "id": "TE",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Confección Industrial",
+                    "id": "CI",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Tejeduría de Calada y sus Ligamentos",
+                    "id": "TCL",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                }
+            ]
+        },
+        {
+            "name": "Quinto año",
+            "subjects": [
+                {
+                    "name": "Fabricación de Tejido de Calada",
+                    "id": "FTC",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Procesos de ennoblecimiento Textil",
+                    "id": "PET",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Fabricación de Tejido de Punto",
+                    "id": "FTP",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Proyecto Final",
+                    "id": "PF",
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                },
+                {
+                    "name": "Práctica Profesional Supervisada",
+                    "id": "PPS",
+                    "duration": [{"name": "Anual", "weeklyHours": 6, "academicHours": 200}]
+                },
+                {
+                    "name": "Electivas",
+                    "number": 2,
+                    "elective": true,
+                    "id": "ELECT"
+                }
+            ]
+        }
+    ]
+}

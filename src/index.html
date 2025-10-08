@@ -3,33 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualizador de Cursada - UTN</title>
-    <link rel="stylesheet" href="styles.css"/>
+    <title>Visualizador de Materias - UTN</title>
+    <base href="/src/">
+    <link rel="stylesheet" href="./styles.css"/>
 </head>
 <body>
-    <h1>Visualizador de Cursada - UTN</h1>
+    <h1>Visualizador de Materias - UTN</h1>
     <ul>
-        <input id="buttons-off" type="checkbox">
-        <label for="buttons-off">Desactivar botones</label>
-        <input id="only-coursed" type="checkbox">
-        <label for="only-coursed">Mostrar solo Cursados</label>
-        <input id="dark-not-approved" type="checkbox">
-        <label id="dark-not-approved">Oscurecer No Aprobados</label>
+        <input class="filter_button" id="buttons-off" type="checkbox">
+        <label class="filter_label" for="buttons-off">Desactivar botones</label>
+        <input class="filter_button" id="only-coursed" type="checkbox">
+        <label class="filter_label" for="only-coursed">Mostrar solo Cursados</label>
+        <input class="filter_button" id="dark-not-approved" type="checkbox">
+        <label class="filter_label" for="dark-not-approved">Oscurecer No Aprobados</label>
     </ul>
     <ul class="button_careers_container" id="button_careers_container">
         <li class="button_careers">Sistemas de Información</li>
         <li class="button_careers">Mecánica</li>
         <li class="button_careers">Electrónica</li>
-        <li class="button_careers">Civil</li>
-        <li class="button_careers">Energía Eléctrica</li>
         <li class="button_careers">Naval</li>
         <li class="button_careers">Industrial</li>
-        <li class="button_careers">Textil</li>
         <li class="button_careers">Química</li>
+        <li class="button_careers">Textil</li>
+
+        <li class="button_careers">Civil</li>
+        <li class="button_careers">Energía Eléctrica</li>
     </ul>
+
+    <h2 class="career_name" id="career-name">Carrera</h2>
     <div id="table_of_contents_container" class="table_of_contents_container">
         
     </div>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
