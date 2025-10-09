@@ -26,4 +26,4 @@ Convertirlo en un **simulador de cursada** que permita:
 
 ---
 
-✍️ Proyecto en desarrollo como práctica personal de **programación web con TypeScript** y parte de mi portfolio.
+✍️ Proyecto en desarrollo como práctica personal de **programación web con TypeScript** y parte de mi portfolio. Inspirado en la estructura académica de la UTN-FRBA.
