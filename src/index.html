@@ -8,8 +8,15 @@
     <link rel="stylesheet" href="./styles.css"/>
 </head>
 <body>
-    <h1>Visualizador de Materias - UTN</h1>
-    <ul>
+    <div class="title">
+        <img src="https://guarani.frba.utn.edu.ar/autogestion/logo-transparente.png">
+        <h1><span style="display: none;">UTN</span> - Visualizador de Materias</h1>
+    </div>
+
+    
+    <div class="body_content">
+
+    <ul class="filters">
         <input class="filter_button" id="buttons-off" type="checkbox">
         <label class="filter_label" for="buttons-off">Desactivar botones</label>
         <input class="filter_button" id="only-coursed" type="checkbox">
@@ -17,6 +24,8 @@
         <input class="filter_button" id="dark-not-approved" type="checkbox">
         <label class="filter_label" for="dark-not-approved">Oscurecer No Aprobados</label>
     </ul>
+
+
     <ul class="button_careers_container" id="button_careers_container">
         <li class="button_careers">Sistemas de Información</li>
         <li class="button_careers">Mecánica</li>
@@ -25,15 +34,13 @@
         <li class="button_careers">Industrial</li>
         <li class="button_careers">Química</li>
         <li class="button_careers">Textil</li>
-
         <li class="button_careers">Civil</li>
         <li class="button_careers">Energía Eléctrica</li>
     </ul>
-
     <h2 class="career_name" id="career-name">Carrera</h2>
-    <div id="table_of_contents_container" class="table_of_contents_container">
-        
+    <div id="table_of_contents_container" class="table_of_contents_container"></div>
     </div>
+    
     <script src="./script.js"></script>
 </body>
 </html>

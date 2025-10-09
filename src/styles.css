@@ -2,36 +2,169 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: var(--principal_font);
 }
 
 :root{
-    --principal_color:#ffdacc;
-    --second_color: #fdab8d;
+    --principal_color:#ffddd9;
+    --second_color: #c31632;
+    --background_color:#ffffff;
+    --text_principal_color:black;
+    --text_second_color: white;
+    --principal_font:sans-serif;
 }
 
 
-/* */
+/**/
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.title h1 {
+    font-size: 30px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.title img{
+    height: 60px;
+}
+
+.filters{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    margin: 10px 20px 15px;
+    width: 100%;
+    max-width: 1500px;
+}
+
+.body_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.career_name{
+    font-size: 25px;
+    display: inline-block;
+    padding: 20px;
+    background-color: var(--second_color);
+    margin: 2px;
+    margin-top: 0;
+    color:var(--text_second_color);
+    text-align: center;
+    width: 100%;
+    max-width: 1500px;
+}
+
+
+
+/*Acá va el Css de la tabla */
 
 .table_of_contents_container{
     display: grid;
-    background-color: var(--principal_color);
+    background-color: var(--background_color);
+    justify-content: center;
+    max-width: 1500px;
 }
 
 .content_column{
     display: flex;
     flex-direction: column;
-    min-width: 210px;
+    
     max-width: 300px;
-    background-color: var(--second_color);
+    background-color: var(--background_color);
 }
+
+.content_header{
+    font-size: 15px;
+    padding: 15px;
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--second_color);
+    color: white;
+    border-left: 2px solid var(--background_color);
+    border-right: 2px solid var(--background_color);
+    border-bottom: 1px solid var(--background_color);
+}
+
+.table_of_contents_container .content_column:first-of-type .content_header{
+    border-left: 0;
+}
+
+
+.table_of_contents_container .content_column:last-of-type .content_header{
+    border-right: 0;
+}
+
 
 .content_subjects, .elective_div{
     background-color: var(--principal_color);
-    padding: 10px;
-    border: 2px var(--second_color) solid;
+    padding: 16px 10px;
+    border: 2px var(--background_color) solid;
+    border-radius: 8px;
 }
 
-.checkbox, .filter_button, .career_checkbox{
+.table_of_contents_container .content_column:first-of-type .content_subjects{
+    border-left: 0;
+}
+
+
+.table_of_contents_container .content_column:last-of-type .content_subjects, .table_of_contents_container .content_column:last-of-type .elective_div{
+    border-right: 0;
+}
+
+.elective_div {
+    margin: 12px 0 0 0;
+}
+
+.elective_div span{
+    color: var(--second_color);
+    font-size: 13px;
+}
+
+.content_name, .elective_name{
+    font-size: 14px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+    color: var(--second_color);
+    font-weight: bold;
+}
+
+.content_subjects select{
+    width: 90%;
+    display: block;
+}
+
+.subject_select{
+    margin: 0 5px 10px;
+    padding: 5px;
+    font-size: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.checkbox, .filter_button, .career_radio{
     display: none;
 }
 
@@ -48,6 +181,14 @@
     user-select: none;
 }
 
+.career_label{
+    margin: 2px;
+    margin-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 0;
+}
+
 .filter_label:hover {
     background-color: var(--second_color);
 }
@@ -59,10 +200,10 @@
 
 .checkbox_label {
     display: inline-block;
-    font-size: 12px;
+    font-size: 10px;
     padding: 5px 10px;
     border-radius: 7mm;
-    border: 2px solid var(--second_color);
+    border: 1px solid var(--second_color);
     margin:15px 5px 5px 5px;
 }
 
@@ -74,41 +215,21 @@
     transform: scale(0.9);
 }
 
-.checkbox:checked + label, .filter_button:checked + label{
+.checkbox:checked + label, .filter_button:checked + label, .career_radio:checked + label{
     background-color: var(--second_color);
+    color: white;
+    font-weight: bold;
 }
 
 .button_careers_container {
     width: 100%;
+    max-width: 1500px;
     display: flex;
 }
 
 .button_careers_container li{
     list-style-type: none;
 }
-
-.content_name, .elective_name{
-    display: flex;
-    width: 100%;
-    align-items: center;
-}
-
-.content_subjects select{
-    width: 90%;
-    display: block;
-}
-
-.content_header{
-    font-size: 20px;
-    padding: 20px;
-    font-weight: bold;
-}
-
-.subject_select{
-    margin: 10px;
-}
-
-
 
 .coursed{
     opacity: 1;

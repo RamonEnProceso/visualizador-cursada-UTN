@@ -44,6 +44,7 @@ const renderCareer = (careerId : string) =>{
 
     if (!career) return;
 
+
     nameContainer.textContent = careersData[careerId]["name"];
 
     //Hasta acá, lee el objeto de la carrera correspondiente 
@@ -172,6 +173,12 @@ const renderCareer = (careerId : string) =>{
                     electiveNumber++;
                     divElective.appendChild(clonedSelect);
 
+                    const span = document.createElement("span");
+                    span.textContent="--No se ha seleccionado una materia--";
+                    span.className="span_elective"
+                    span.style.display = "none";
+                    divElective.appendChild(span);
+
                     clonedSelect.addEventListener("change",()=>{
                         divElective.innerHTML="";
                         divElective.appendChild(clonedSelect);
@@ -214,9 +221,12 @@ const renderCareer = (careerId : string) =>{
             }
 
         })
+
         tableContainer.style.gridTemplateColumns = `repeat(${numLevels}, 1fr)`
+        
         tableContainer.appendChild(levelHtml);
     })
+    clearFilters();
 }
 
 const renderButtons = () =>{
@@ -224,16 +234,18 @@ const renderButtons = () =>{
 
     Object.keys(careersData).forEach((careerKey)=>{
         const li = document.createElement("li");
-        const ck = document.createElement("input");
-        ck.type = "checkbox";
-        ck.id = careerKey;
-        ck.className = "career_checkbox"
+        const rd = document.createElement("input");
+        rd.type = "radio";
+        rd.id = careerKey;
+        rd.className = "career_radio";
+        rd.name = "chosen_career";
+        rd.checked = true;
         const lb = document.createElement("label");
         lb.textContent = careersData[careerKey]["name"];
         lb.htmlFor = careerKey;
         lb.className = "career_label";
-        li.addEventListener("click", () =>{renderCareer(careerKey)})
-        li.appendChild(ck);
+        rd.addEventListener("click", () =>{renderCareer(careerKey)})
+        li.appendChild(rd);
         li.appendChild(lb);
         buttonContainer.appendChild(li);
     })
@@ -243,6 +255,8 @@ const renderButtons = () =>{
 const buttonOff = () =>{
     const inputCheckboxes = document.querySelectorAll<HTMLElement>(".checkbox_label");
     const selectSubject = document.querySelectorAll<HTMLElement>(".subject_select");
+    const spanElective = document.querySelectorAll<HTMLElement>(".span_elective")
+
     inputCheckboxes.forEach(cb=>{
         if (cb.style.display === "none"){
             cb.style.display = "inline-block"
@@ -253,14 +267,23 @@ const buttonOff = () =>{
     selectSubject.forEach(sl=>{
         if (sl.style.display === "none"){
             sl.style.display = "inline-block"
+            spanElective.forEach(sp =>{
+                sp.style.display = "none"
+            })
         } else{
             sl.style.display = "none"
+            spanElective.forEach(sp =>{
+                sp.style.display = "inline-block"
+            })
         }
     })
+
+
 }
 
-const hideOnlyCoursed = () =>{
+const showOnlyCoursed = () =>{
     const coursed = document.querySelectorAll<HTMLElement>("div.content_subjects:not(.coursed)");
+    
     coursed.forEach(div =>{
         if (div.style.display ==="none"){
             div.style.display = "inline-block"
@@ -272,6 +295,7 @@ const hideOnlyCoursed = () =>{
 
 const darkNotApproved = ()=>{
     const allDivs = document.querySelectorAll<HTMLElement>("div.content_subjects");
+    
     allDivs.forEach(div => {
         if (div.classList.contains("approved")) {
             div.style.opacity = "1";
@@ -287,13 +311,19 @@ const careerButtonsRender = async () => {
     }
 }
 
+const clearFilters = () => {
+    inputOnlyCoursed.checked = false;
+    inputDarkNotApproved.checked = false;
+    inputButtonOff.checked = false;
+}
+
 
 inputButtonOff.addEventListener("change", ()=>{
     buttonOff();
 })
 
 inputOnlyCoursed.addEventListener("change",()=>{
-    hideOnlyCoursed();
+    showOnlyCoursed();
 })
 
 inputDarkNotApproved.addEventListener("change",()=>{
