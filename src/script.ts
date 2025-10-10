@@ -223,7 +223,8 @@ const renderCareer = (careerId : string) =>{
         })
 
         tableContainer.style.gridTemplateColumns = `repeat(${numLevels}, 1fr)`
-        
+        changeCareersSize()
+
         tableContainer.appendChild(levelHtml);
     })
     clearFilters();
@@ -250,6 +251,19 @@ const renderButtons = () =>{
         buttonContainer.appendChild(li);
     })
 
+}
+
+const changeCareersSize = () =>{
+    const count = tableContainer.children.length;
+    const width = window.innerWidth;
+    if (width < 895){
+        tableContainer.style.gridTemplateColumns = `repeat(${Math.floor(count/2)}, 1fr)`
+        if (width < 500){
+        tableContainer.style.gridTemplateColumns = `repeat(2, 1fr)`
+    }
+    } else{
+        tableContainer.style.gridTemplateColumns = `repeat(${count}, 1fr)`
+    }
 }
 
 const buttonOff = () =>{
@@ -317,6 +331,7 @@ const clearFilters = () => {
     inputButtonOff.checked = false;
 }
 
+window.addEventListener('resize', changeCareersSize);
 
 inputButtonOff.addEventListener("change", ()=>{
     buttonOff();
@@ -333,3 +348,4 @@ inputDarkNotApproved.addEventListener("change",()=>{
 
 
 careerButtonsRender();
+changeCareersSize();

@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: var(--principal_font);
+    color: var(--text_principal_color);
 }
 
 :root{
@@ -12,6 +13,8 @@
     --text_principal_color:black;
     --text_second_color: white;
     --principal_font:sans-serif;
+    --second_font:arial;
+    --font-size:12px;
 }
 
 
@@ -32,7 +35,7 @@ footer {
 }
 
 .title h1 {
-    font-size: 30px;
+    font-size: calc(var(--font-size)*2);
     display: inline-block;
 }
 
@@ -46,10 +49,12 @@ footer {
     flex-direction: row;
     justify-content: right;
     align-items: center;
-    margin: 10px 20px 15px;
+    margin: 25px 20px 35px;
     width: 100%;
     max-width: 1500px;
 }
+
+
 
 .body_content{
     display: flex;
@@ -61,7 +66,7 @@ footer {
 }
 
 .career_name{
-    font-size: 25px;
+    font-size: calc(var(--font-size)*2.75);
     display: inline-block;
     padding: 20px;
     background-color: var(--second_color);
@@ -93,12 +98,12 @@ footer {
 }
 
 .content_header{
-    font-size: 15px;
+    font-size: calc(var(--font-size)*1.5);
     padding: 15px;
     font-weight: bold;
     text-align: center;
     background-color: var(--second_color);
-    color: white;
+    color: var(--text_second_color);
     border-left: 2px solid var(--background_color);
     border-right: 2px solid var(--background_color);
     border-bottom: 1px solid var(--background_color);
@@ -142,17 +147,21 @@ footer {
 
 .elective_div span{
     color: var(--second_color);
-    font-size: 13px;
+    font-size: var(--font-size);
 }
 
 .content_name, .elective_name{
-    font-size: 14px;
+    font-size: calc(var(--font-size)*1.25);
     display: flex;
     width: 100%;
     align-items: center;
 
     color: var(--second_color);
     font-weight: bold;
+
+    font-family: var(--second_font);
+
+    transition: opacity 0.5s;
 }
 
 .content_subjects select{
@@ -163,7 +172,7 @@ footer {
 .subject_select{
     margin: 0 5px 10px;
     padding: 5px;
-    font-size: 10px;
+    font-size: calc(var(--font-size)*0.8);
 }
 
 
@@ -182,13 +191,13 @@ footer {
 
 .checkbox_label, .filter_label, .career_label{
     display: inline-block;
-    font-size: 12px;
+    font-size: var(--font-size);
     padding: 5px 10px;
     border-radius: 1mm;
     border: 2px solid var(--second_color);
     margin:15px 5px 5px 5px;
     transform: scale(1);
-    transition: transform 0.1s;
+    transition: transform 0.1s, opacity 0.1s;
     cursor: pointer;
     user-select: none;
 }
@@ -201,8 +210,14 @@ footer {
     border-bottom: 0;
 }
 
+.button_careers_container li:first-child .career_label{
+    margin-left: 0;
+}
+
+
 .filter_label:hover {
     background-color: var(--second_color);
+    color:var(--text_second_color);
 }
 
 .filter_label:active{
@@ -212,11 +227,14 @@ footer {
 
 .checkbox_label {
     display: inline-block;
-    font-size: 10px;
+    font-size: calc(var(--font-size)*0.8);
     padding: 5px 10px;
     border-radius: 7mm;
     border: 1px solid var(--second_color);
     margin:15px 5px 5px 5px;
+    color: var(--second_color);
+    opacity: 0.5;
+    font-family: var(--second_font);
 }
 
 .checkbox_label:hover{
@@ -225,12 +243,14 @@ footer {
 
 .checkbox_label:active{
     transform: scale(0.9);
+    
 }
 
 .checkbox:checked + label, .filter_button:checked + label, .career_radio:checked + label{
     background-color: var(--second_color);
-    color: white;
+    color: var(--text_second_color);
     font-weight: bold;
+    opacity: 1;
 }
 
 .button_careers_container {
@@ -242,6 +262,68 @@ footer {
 .button_careers_container li{
     list-style-type: none;
 }
+
+
+@media (max-width: 1200px) {
+    :root{
+        --font-size:11px;
+    }
+
+    .career_name{
+        font-size: calc(var(--font-size)*2);
+    }
+
+    .content_header{
+        font-size: calc(var(--font-size)*1.25);
+    }
+
+    .checkbox_label{
+        padding: 2px 5px;
+    }
+
+    .content_subjects, .elective_div{
+        padding: 10px
+    }
+}
+
+@media (max-width: 890px){
+
+    .title{
+        margin-bottom: 20px;
+    }
+
+    .title h1{
+        font-size: calc(var(--font-size)*1.25);
+    }
+    .title img{
+        height: 25px;
+
+    }
+
+    .filters {
+        margin-top: 10px;
+        margin-bottom: 80px;
+        justify-content: center;
+    }
+
+    .button_careers_container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 50px;
+        gap: 20px;
+    }
+
+    .career_label{
+        width: 100%;
+        height: 100%;
+        border: 2px solid var(--second_color);
+        border-radius: 1mm;
+        text-align: center;
+    }
+
+
+}
+
 
 .coursed{
     opacity: 1;
