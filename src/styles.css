@@ -121,7 +121,7 @@ footer {
 
 .content_subjects, .elective_div{
     background-color: var(--principal_color);
-    padding: 16px 10px;
+    padding: 16px 10px 16px 20px;
     border: 2px var(--background_color) solid;
     border-radius: 8px;
 }
@@ -150,8 +150,8 @@ footer {
     font-size: var(--font-size);
 }
 
-.content_name, .elective_name{
-    font-size: calc(var(--font-size)*1.25);
+.content_name, .elective_div .elective_name{
+    font-size: calc(var(--font-size)*1.5);
     display: flex;
     width: 100%;
     align-items: center;
@@ -162,6 +162,8 @@ footer {
     font-family: var(--second_font);
 
     transition: opacity 0.5s;
+
+    margin: 5px 0;
 }
 
 .content_subjects select{
@@ -169,7 +171,7 @@ footer {
     display: block;
 }
 
-.subject_select{
+.subject_select, .duration_select{
     margin: 0 5px 10px;
     padding: 5px;
     font-size: calc(var(--font-size)*0.8);
@@ -179,6 +181,34 @@ footer {
 
 
 
+.duration_select{
+    margin: 10px 0 0;
+}
+
+.content_duration_div{
+    margin-top: 10px;
+    opacity: 0.85;
+}
+
+.duration_name, .elective_div .duration_name{
+    font-size: calc(var(--font-size)*1);
+    color: var(--second_color);
+    font-weight: bold;
+}
+
+.duration span, .elective_div .duration span{
+    font-size: calc(var(--font-size)*0.9);
+    color: var(--second_color);
+}
+
+.duration, .elective_div .duration{
+    display: block;
+    color: var(--second_color);
+}
+
+.duration .number{
+    font-weight: bold;
+}
 
 
 
@@ -264,6 +294,10 @@ footer {
 }
 
 
+
+
+
+
 @media (max-width: 1200px) {
     :root{
         --font-size:11px;
@@ -282,8 +316,11 @@ footer {
     }
 
     .content_subjects, .elective_div{
-        padding: 10px
+
+        padding: 10px 15px 10px 15px;
     }
+
+    
 }
 
 @media (max-width: 890px){

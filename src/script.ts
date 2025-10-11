@@ -2,6 +2,7 @@ const buttonContainer : HTMLElement = document.getElementById("button_careers_co
 const tableContainer : HTMLElement = document.getElementById("table_of_contents_container")!;
 const nameContainer : HTMLHeadingElement = document.getElementById("career-name") as HTMLHeadingElement;
 const inputButtonOff : HTMLInputElement = document.getElementById("buttons-off") as HTMLInputElement;
+const inputDurationOff : HTMLInputElement = document.getElementById("duration-off") as HTMLInputElement;
 const inputOnlyCoursed : HTMLInputElement = document.getElementById("only-coursed") as HTMLInputElement;
 const inputDarkNotApproved : HTMLInputElement = document.getElementById("dark-not-approved") as HTMLInputElement;
 
@@ -95,6 +96,55 @@ const renderCareer = (careerId : string) =>{
             div.appendChild(divSpan);
             div.className = "content_subjects none";
 
+            const duration = document.createElement("div");
+            duration.className = "content_duration"
+            const durationDiv = document.createElement("div");
+            duration.className = "content_duration_div"
+
+            const renderDuration = (subject: Subject, vl:string, dv : HTMLElement) => {
+                const durationOption = subject.duration ? Array.from(subject.duration).find((opt: Duration) => opt.name === vl) : undefined;
+                const sp = document.createElement("span");
+                sp.textContent = durationOption?.name!;
+                sp.className = "duration_name";
+                const spWeek = document.createElement("span");
+                spWeek.innerHTML = `<span>Por Semana:</span> <span class="number">${durationOption?.weeklyHours!}hs</span>`;
+                spWeek.className = "duration week"
+                const spAcademicHours = document.createElement("span");
+                spAcademicHours.innerHTML = `<span>Total (Cátedra):</span> <span class="number">${durationOption?.academicHours!}hs</span>`;
+                spAcademicHours.className = "duration academic_hours"
+
+                console.log(spWeek.textContent)
+                dv.appendChild(sp);
+                dv.appendChild(spWeek);
+                dv.appendChild(spAcademicHours);
+                dv.className = "content_duration_div";
+                dv.style.display = "none";
+            }   
+
+            if ((subject.duration?.length ?? 0) > 1){
+                const sl = document.createElement("select")
+                sl.className = "duration_select"
+                subject.duration?.forEach(option =>{
+                    const op = document.createElement("option");
+                    op.textContent = option.name;
+                    op.value = option.name;
+                    sl.appendChild(op);
+                })
+                renderDuration(subject, subject.duration?.[0].name ?? "", durationDiv)
+                sl.addEventListener("change",()=>{
+                    durationDiv.textContent = ""
+                    renderDuration(subject, sl.value, durationDiv)
+                })
+                duration.appendChild(sl);
+            }else{
+                if (!subject.elective){
+                    renderDuration(subject, subject.duration?.[0].name ?? "", durationDiv)
+                }
+            }
+
+            duration.appendChild(durationDiv)
+            div.appendChild(duration)
+
             const updateDivStatus = (cb: HTMLInputElement)=>{
                 if(!div) return;
                 if(cb.id.includes("coursed")){
@@ -183,28 +233,38 @@ const renderCareer = (careerId : string) =>{
                         divElective.innerHTML="";
                         divElective.appendChild(clonedSelect);
                         
+                        const electiveDuration = document.createElement("div")
+                        electiveDuration.className = "content_duration_div"
+
                         const chosen = clonedSelect.value; 
-                        console.log("Elegiste:", chosen);
 
                         if (!chosenElectives[subject.id]) {
                             chosenElectives[subject.id] = [];
                         }
 
                         chosenElectives[subject.id][i] = chosen;
-                        console.log(chosenElectives);
 
                         divElective.querySelectorAll("input").forEach(input => input.remove());
 
-                        const electiveOptionName = Array.from(clonedSelect.options).find(opt => opt.value === chosen);
+                        const subjects = careersData[careerId]["levels"][0]["subjects"] as Subject[];
+                        const selectedElective = subjects.find(subject => subject.id === chosen)|| {
+                            id: "",
+                            name: "",
+                            duration: []
+                        };
 
                         const electiveName = document.createElement("span");
                         electiveName.className = "elective_name"
-                        electiveName.textContent = electiveOptionName?.textContent || "";
+                        electiveName.textContent = selectedElective.name;
 
                         div.style.padding = "0";
                         divSpan.style.display = "none";
 
                         divElective.appendChild(electiveName);
+                        divElective.appendChild(electiveDuration)
+
+                        renderDuration(selectedElective, selectedElective.duration?.[0].name ?? "", electiveDuration)
+
                         createCheckboxes(divElective,chosen);
 
                     })
@@ -229,6 +289,8 @@ const renderCareer = (careerId : string) =>{
         changeCareersSize();
     })
     clearFilters();
+    inputDurationOff.checked = true;
+    durationOff();
 }
 
 const renderButtons = () =>{
@@ -270,7 +332,8 @@ const changeCareersSize = () =>{
 const buttonOff = () =>{
     const inputCheckboxes = document.querySelectorAll<HTMLElement>(".checkbox_label");
     const selectSubject = document.querySelectorAll<HTMLElement>(".subject_select");
-    const spanElective = document.querySelectorAll<HTMLElement>(".span_elective")
+    const spanElective = document.querySelectorAll<HTMLElement>(".span_elective");
+    const selectDuration = document.querySelectorAll<HTMLElement>(".duration_select");
 
     inputCheckboxes.forEach(cb=>{
         if (cb.style.display === "none"){
@@ -292,8 +355,25 @@ const buttonOff = () =>{
             })
         }
     })
+    selectDuration.forEach(sl=>{
+        if (sl.style.display === "none"){
+            sl.style.display = "block"
+        } else{
+            sl.style.display = "none"
+        }
+    }) 
 
+}
 
+const durationOff = () => {
+    const durationDivs = document.querySelectorAll<HTMLElement>(".content_duration_div");
+    durationDivs.forEach(dv=>{
+        if (inputDurationOff.checked){
+            dv.style.display = "none"
+        } else{
+            dv.style.display = "block"
+        }
+    })
 }
 
 const showOnlyCoursed = () =>{
@@ -346,6 +426,9 @@ inputDarkNotApproved.addEventListener("change",()=>{
     darkNotApproved();
 })
 
+inputDurationOff.addEventListener("change", () =>{
+    durationOff();
+})
 
 
 careerButtonsRender();
