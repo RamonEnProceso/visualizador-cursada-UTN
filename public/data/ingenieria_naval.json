@@ -27,7 +27,7 @@
             ]
         },
         {
-            "name": "Primer año",
+            "name": "1er",
             "subjects": [
                 {
                     "name": "Álgebra y Geometría Analítica",
@@ -78,7 +78,7 @@
             ]
         },
         {
-            "name": "Segundo año",
+            "name": "2do",
             "subjects": [
                 {
                     "name": "Análisis Matemático II",
@@ -129,7 +129,7 @@
             ]
         },
         {
-            "name": "Tercer año",
+            "name": "3er",
             "subjects": [
                 {
                     "name": "Análisis Estructural II",
@@ -169,7 +169,7 @@
             ]
         },
         {
-            "name": "Cuarto año",
+            "name": "4to",
             "subjects": [
                 {
                     "name": "Teoría del Buque II",
@@ -220,7 +220,7 @@
             ]
         },
         {
-            "name": "Quinto año",
+            "name": "5to",
             "subjects": [
                 {
                     "name": "Plantas Eléctricas Navales",
@@ -271,7 +271,7 @@
             ]
         },
         {
-            "name": "Sexto año",
+            "name": "6to",
             "subjects": [
                 {
                     "name": "Proyecto Final",

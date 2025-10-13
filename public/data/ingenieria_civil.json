@@ -82,7 +82,7 @@
             ]
         },
         {
-            "name": "Primer año",
+            "name": "1er",
             "subjects": [
                 {
                     "name": "Análisis Matemático I",
@@ -127,7 +127,7 @@
             ]
         },
         {
-            "name": "Segundo año",
+            "name": "2do",
             "subjects": [
                 {
                     "name": "Análisis Matemático II",
@@ -172,7 +172,7 @@
             ]
         },
         {
-            "name": "Tercer año",
+            "name": "3er",
             "subjects": [
                 {
                     "name": "Resistencia de Materiales",
@@ -222,7 +222,7 @@
             ]
         },
         {
-            "name": "Cuarto año",
+            "name": "4to",
             "subjects": [
                 {
                     "name": "Cálculo Avanzado",
@@ -267,7 +267,7 @@
             ]
         },
         {
-            "name": "Quinto año",
+            "name": "5to",
             "subjects": [
                 {
                     "name": "Construcciones Metálicas y de Madera",
@@ -313,7 +313,7 @@
             ]
         },
         {
-            "name": "Sexto año",
+            "name": "6to",
             "subjects": [
                 {
                     "name": "Proyecto Final",

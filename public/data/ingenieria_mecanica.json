@@ -67,7 +67,7 @@
             ]
         },
         {
-            "name": "Primer año",
+            "name": "1er",
             "subjects": [
                 {
                     "name": "Análisis Matemático I",
@@ -112,7 +112,7 @@
             ]
         },
         {
-            "name": "Segundo año",
+            "name": "2do",
             "subjects": [
                 {
                     "name": "Materiales No Metálicos",
@@ -157,7 +157,7 @@
             ]
         },
         {
-            "name": "Tercer año",
+            "name": "3er",
             "subjects": [
                 {
                     "name": "Termodinámica",
@@ -207,7 +207,7 @@
             ]
         },
         {
-            "name": "Cuarto año",
+            "name": "4to",
             "subjects": [
                 {
                     "name": "Economía",
@@ -252,7 +252,7 @@
             ]
         },
         {
-            "name": "Quinto año",
+            "name": "5to",
             "subjects": [
                 {
                     "name": "Tecnología de Fabricación",

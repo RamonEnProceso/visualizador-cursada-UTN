@@ -97,7 +97,7 @@
             ]
         },
         {
-            "name": "Primer año",
+            "name": "1er",
             "subjects": [
                 {
                     "name": "Análisis Matemático I",
@@ -142,7 +142,7 @@
             ]
         },
         {
-            "name": "Segundo año",
+            "name": "3do",
             "subjects": [
                 {
                     "name": "Administración General",
@@ -187,7 +187,7 @@
             ]
         },
         {
-            "name": "Tercer año",
+            "name": "3er",
             "subjects": [
                 {
                     "name": "Estudio del Trabajo",
@@ -237,7 +237,7 @@
             ]
         },
         {
-            "name": "Cuarto año",
+            "name": "4to",
             "subjects": [
                 {
                     "name": "Evaluación de Proyectos",
@@ -292,7 +292,7 @@
             ]
         },
         {
-            "name": "Quinto año",
+            "name": "5to",
             "subjects": [
                 {
                     "name": "Control de Gestión",
