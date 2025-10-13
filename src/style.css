@@ -22,8 +22,20 @@
 
 footer {
     margin: 20px;
+    margin-top: 100px;
     font-size: 10px;
     text-align: center;
+}
+
+.aclaracion{
+    display: block;
+    font-size: calc(var(--font-size)*0.9);
+    text-align: center;
+}
+
+.aclaracion:nth-child(4) {
+    font-size: calc(var(--font-size)*1.4);
+    margin-top: 150px;
 }
 
 .title {
@@ -71,11 +83,44 @@ footer {
     padding: 20px;
     background-color: var(--second_color);
     margin: 2px;
+    margin-left: 0;
     margin-top: 0;
     color:var(--text_second_color);
     text-align: center;
     width: 100%;
     max-width: 1500px;
+}
+
+
+
+.print_button {
+    width: 70vw;
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    height: 50px;
+
+    font-weight: bold;
+    font-size: calc(var(--font-size)*1.75);
+
+    background-color: var(--second_color);
+    color: var(--text_second_color);
+    border-radius: 2mm;
+    border: 1mm solid var(--second_color);
+
+    cursor: pointer;
+
+    transition: transform 0.05s;
+}
+
+.print_button:hover{
+    transform: scale(1.02);
+}
+
+.print_button:active {
+    background-color: var(--principal_color);
+    color: var(--second_color);
+    transform: scale(0.99);
 }
 
 
@@ -361,6 +406,18 @@ footer {
 
 }
 
+@media print {
+    .checkbox_label{
+        display: none;
+    }
+    .elective_div .subject_select{
+        display: none;
+    }
+    .duration_select{
+        display: none;
+    }
+
+}
 
 .coursed{
     opacity: 1;
@@ -372,4 +429,8 @@ footer {
 
 .none{
     opacity: 1;
+}
+
+.break-page {
+  page-break-inside: avoid;
 }

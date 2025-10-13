@@ -4,19 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visualizador de Materias - UTN.BA</title>
-    <base href="/src/">
-    <link rel="icon" href="../data/icons/logo.png" sizes="32x32">
-    <link rel="stylesheet" href="./styles.css"/>
+    <link rel="icon" href="/icons/logo.png" sizes="32x32">
 </head>
 <body>
     <div class="title">
-        <img src="../data/icons/logo.png">
+        <img src="/icons/logo.png">
         <h1>UTN.<span style="color: var(--second_color)">BA</span> - Visualizador de Materias</h1>
     </div>
 
-    
-    
-
+    <span class="aclaracion">Hecho por un estudiante, para estudiantes</span>
 
     <div class="body_content">
 
@@ -43,12 +39,14 @@
         <li class="button_careers">Civil</li>
         <li class="button_careers">Energía Eléctrica</li>
     </ul>
+    <div id="print-div" class="print_div">
     <h2 class="career_name" id="career-name">Carrera</h2>
-    <div id="table_of_contents_container" class="table_of_contents_container"></div>
+    <div id="table_of_contents_container" class="table_of_contents_container break-page"></div>
+    </div>
     </div>
     
     <footer>Este es un proyecto independiente, creado como práctica. No afiliado oficialmente a la Universidad Tecnológica Nacional ni a la Facultad Regional Buenos Aires.</footer>
 
-    <script src="./script.js"></script>
+   <script type="module" src="/src/main.ts"></script>
 </body>
 </html>

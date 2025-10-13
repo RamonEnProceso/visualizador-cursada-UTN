@@ -1,3 +1,5 @@
+import './style.css'
+
 const buttonContainer : HTMLElement = document.getElementById("button_careers_container")!;
 const tableContainer : HTMLElement = document.getElementById("table_of_contents_container")!;
 const nameContainer : HTMLHeadingElement = document.getElementById("career-name") as HTMLHeadingElement;
@@ -5,7 +7,6 @@ const inputButtonOff : HTMLInputElement = document.getElementById("buttons-off")
 const inputDurationOff : HTMLInputElement = document.getElementById("duration-off") as HTMLInputElement;
 const inputOnlyCoursed : HTMLInputElement = document.getElementById("only-coursed") as HTMLInputElement;
 const inputDarkNotApproved : HTMLInputElement = document.getElementById("dark-not-approved") as HTMLInputElement;
-
 
 const careerOrder : string[] = ["textil","naval","quimica","electrica","electronica","civil","mecanica","industrial","sistemas"];
 
@@ -320,10 +321,7 @@ const changeCareersSize = () =>{
     const count = tableContainer.children.length;
     const width = window.innerWidth;
     if (width < 895){
-        tableContainer.style.gridTemplateColumns = `repeat(3, 1fr)`
-        if (width < 500){
         tableContainer.style.gridTemplateColumns = `repeat(2, 1fr)`
-    }
     } else{
         tableContainer.style.gridTemplateColumns = `repeat(${count}, 1fr)`
     }
@@ -402,7 +400,7 @@ const darkNotApproved = ()=>{
 
 const careerButtonsRender = async () => {
     for (const career of careerOrder){
-        await loadCareer(career, `../data/ingenieria_${career}.json`)
+        await loadCareer(career, `/data/ingenieria_${career}.json`)
     }
 }
 
@@ -413,6 +411,7 @@ const clearFilters = () => {
 }
 
 window.addEventListener('resize', changeCareersSize);
+window.addEventListener('load', changeCareersSize);
 
 inputButtonOff.addEventListener("change", ()=>{
     buttonOff();
@@ -429,7 +428,6 @@ inputDarkNotApproved.addEventListener("change",()=>{
 inputDurationOff.addEventListener("change", () =>{
     durationOff();
 })
-
 
 careerButtonsRender();
 changeCareersSize();
