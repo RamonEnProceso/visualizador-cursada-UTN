@@ -14,7 +14,11 @@
     --text_second_color: white;
     --principal_font:sans-serif;
     --second_font:arial;
-    --font-size:12px;
+    --first-font-size:12px;
+    --second-font-size:calc(var(--first-font-size)*2.75);
+    --third-font-size: calc(var(--first-font-size)*2);
+    --fourth-font-size: calc(var(--first-font-size)*1.4);
+    --fifth-font-size: calc(var(--first-font-size)*0.8);
 }
 
 
@@ -29,25 +33,22 @@ footer {
 
 .aclaracion{
     display: block;
-    font-size: calc(var(--font-size)*0.9);
+    font-size: var(--first-font-size);
     text-align: center;
 }
 
-.aclaracion:nth-child(4) {
-    font-size: calc(var(--font-size)*1.4);
-    margin-top: 150px;
-}
-
 .title {
+    
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin: 15px 0 5px;
+    margin-top: 30px;
 }
 
 .title h1 {
-    font-size: calc(var(--font-size)*2);
+    font-size: var(--second-font-size);
     display: inline-block;
 }
 
@@ -78,7 +79,7 @@ footer {
 }
 
 .career_name{
-    font-size: calc(var(--font-size)*2.75);
+    font-size: var(--second-font-size);
     display: inline-block;
     padding: 20px;
     background-color: var(--second_color);
@@ -89,38 +90,6 @@ footer {
     text-align: center;
     width: 100%;
     max-width: 1500px;
-}
-
-
-
-.print_button {
-    width: 70vw;
-    display: block;
-    margin: auto;
-    margin-top: 40px;
-    height: 50px;
-
-    font-weight: bold;
-    font-size: calc(var(--font-size)*1.75);
-
-    background-color: var(--second_color);
-    color: var(--text_second_color);
-    border-radius: 2mm;
-    border: 1mm solid var(--second_color);
-
-    cursor: pointer;
-
-    transition: transform 0.05s;
-}
-
-.print_button:hover{
-    transform: scale(1.02);
-}
-
-.print_button:active {
-    background-color: var(--principal_color);
-    color: var(--second_color);
-    transform: scale(0.99);
 }
 
 
@@ -143,7 +112,7 @@ footer {
 }
 
 .content_header{
-    font-size: calc(var(--font-size)*1.5);
+    font-size: var(--third-font-size);
     padding: 15px;
     font-weight: bold;
     text-align: center;
@@ -192,11 +161,11 @@ footer {
 
 .elective_div span{
     color: var(--second_color);
-    font-size: var(--font-size);
+    font-size: var(--first-font-size);
 }
 
 .content_name, .elective_div .elective_name{
-    font-size: calc(var(--font-size)*1.5);
+    font-size: var(--fourth-font-size);
     display: flex;
     width: 100%;
     align-items: center;
@@ -219,7 +188,7 @@ footer {
 .subject_select, .duration_select{
     margin: 0 5px 10px;
     padding: 5px;
-    font-size: calc(var(--font-size)*0.8);
+    font-size: var(--first-font-size);
 }
 
 
@@ -236,13 +205,13 @@ footer {
 }
 
 .duration_name, .elective_div .duration_name{
-    font-size: calc(var(--font-size)*1);
+    font-size: var(--first-font-size);
     color: var(--second_color);
     font-weight: bold;
 }
 
 .duration span, .elective_div .duration span{
-    font-size: calc(var(--font-size)*0.9);
+    font-size: var(--fifth-font-size);
     color: var(--second_color);
 }
 
@@ -266,7 +235,7 @@ footer {
 
 .checkbox_label, .filter_label, .career_label{
     display: inline-block;
-    font-size: var(--font-size);
+    font-size: var(--first-font-size);
     padding: 5px 10px;
     border-radius: 1mm;
     border: 2px solid var(--second_color);
@@ -302,7 +271,7 @@ footer {
 
 .checkbox_label {
     display: inline-block;
-    font-size: calc(var(--font-size)*0.8);
+    font-size: var(--fifth-font-size);
     padding: 5px 10px;
     border-radius: 7mm;
     border: 1px solid var(--second_color);
@@ -345,15 +314,7 @@ footer {
 
 @media (max-width: 1200px) {
     :root{
-        --font-size:11px;
-    }
-
-    .career_name{
-        font-size: calc(var(--font-size)*2);
-    }
-
-    .content_header{
-        font-size: calc(var(--font-size)*1.25);
+        --first-font-size:11px;
     }
 
     .checkbox_label{
@@ -374,9 +335,6 @@ footer {
         margin-bottom: 20px;
     }
 
-    .title h1{
-        font-size: calc(var(--font-size)*1.25);
-    }
     .title img{
         height: 25px;
 
@@ -403,19 +361,6 @@ footer {
         text-align: center;
     }
 
-
-}
-
-@media print {
-    .checkbox_label{
-        display: none;
-    }
-    .elective_div .subject_select{
-        display: none;
-    }
-    .duration_select{
-        display: none;
-    }
 
 }
 
