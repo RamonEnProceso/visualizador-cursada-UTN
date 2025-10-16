@@ -7,62 +7,86 @@
                 {
                     "id": "D3D",
                     "name": "Diseño en 3D",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 48}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 48}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "id": "ER",
                     "name": "Energías Renovables",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "id": "I40",
                     "name": "Industria 4.0",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "id": "TM",
                     "name": "Tecnología Mecánica",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "id": "AI",
                     "name": "Automatización Industrial",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "id": "CEF",
                     "name": "Cálculo por Elementos Finitos",
-                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 5, "academicHours": 80}]
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 5, "academicHours": 80}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "id": "EGPIS",
                     "name": "Evaluación y Gestión de Proyectos de Ingeniería Sustentable",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "id": "TS",
                     "name": "Tecnología de la Soldadura",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "id": "ITF",
                     "name": "Introducción a Tecnologías Ferroviarias",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "id": "AUTO",
                     "name": "Automotores",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "id": "PIAR",
                     "name": "Proyecto de Instalaciones de Aire Acondicionado y Refrigeración",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "id": "RI",
                     "name": "Robótica Industrial",
-                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 5, "academicHours": 80}]
+                    "duration": [{"name": "Cuatrimestral", "weeklyHours": 5, "academicHours": 80}],
+                    "approved": [],
+                    "taken": []
                 }
             ]
         },
@@ -72,42 +96,58 @@
                 {
                     "name": "Análisis Matemático I",
                     "id": "AM1",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Química General",
                     "id": "QG",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Álgebra y Geometría Analítica",
                     "id": "AGA",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Física I",
                     "id": "F1",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Ingeniería y Sociedad",
                     "id": "IyS",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 48}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 48}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Ingeniería Mecánica I",
                     "id": "IM1",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 48}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 48}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Sistemas de Representación",
                     "id": "SR",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 72}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 72}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Fundamentos de Informática",
                     "id": "FI",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 48}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 48}],
+                    "approved": [],
+                    "taken": []
                 }
             ]
         },
@@ -117,42 +157,58 @@
                 {
                     "name": "Materiales No Metálicos",
                     "id": "MNM",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 72}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 72}],
+                    "approved": [],
+                    "taken": ["F1", "QG"]
                 },
                 {
                     "name": "Estabilidad I",
                     "id": "EST1",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}],
+                    "approved": [],
+                    "taken": ["AM1", "AGA", "F1"]
                 },
                 {
                     "name": "Materiales Metálicos",
                     "id": "MM",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}],
+                    "approved": [],
+                    "taken": ["F1", "QG"]
                 },
                 {
                     "name": "Análisis Matemático II",
                     "id": "AM2",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}],
+                    "approved": [],
+                    "taken": ["AM1", "AGA"]
                 },
                 {
                     "name": "Física II",
                     "id": "F2",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}],
+                    "approved": [],
+                    "taken": ["AM1", "F1"]
                 },
                 {
                     "name": "Ingeniería Ambiental y Seguridad Industrial",
                     "id": "IASI",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 72}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 72}],
+                    "approved": [],
+                    "taken": ["F1", "QG"]
                 },
                 {
                     "name": "Ingeniería Mecánica II",
                     "id": "IM2",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 48}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 48}],
+                    "approved": [],
+                    "taken": ["IM1", "F1"]
                 },
                 {
                     "name": "Inglés I",
                     "id": "I1",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 48}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 48}],
+                    "approved": [],
+                    "taken": []
                 }
             ]
         },
@@ -162,47 +218,65 @@
                 {
                     "name": "Termodinámica",
                     "id": "TER",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}],
+                    "approved": ["AM1", "AGA", "F1"],
+                    "taken": ["AM2", "F2"]
                 },
                 {
                     "name": "Mecánica Racional",
                     "id": "MR",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}],
+                    "approved": ["AM1", "AGA", "F1"],
+                    "taken": ["EST1", "AM2"]
                 },
                 {
                     "name": "Mediciones y Ensayos",
                     "id": "ME",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}],
+                    "approved": ["AM1", "F1"],
+                    "taken": ["EST1", "MM", "F2"]
                 },
                 {
                     "name": "Diseño Mecánico",
                     "id": "DM",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 72}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 72}],
+                    "approved": ["IM1", "FI", "F1", "SR"],
+                    "taken": ["EST1", "MM", "MNM"]
                 },
                 {
                     "name": "Cálculo Avanzado",
                     "id": "CA",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 72}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 72}],
+                    "approved": ["AM1", "AGA", "FI"],
+                    "taken": ["AM2"]
                 },
                 {
                     "name": "Ingeniería Mecánica III",
                     "id": "IM3",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 48}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 48}],
+                    "approved": ["IM1", "AM1", "F1", "QG"],
+                    "taken": ["IM2", "MM", "MNM"]
                 },
                 {
                     "name": "Probabilidad y Estadística",
                     "id": "PyE",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 72}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 72}],
+                    "approved": [],
+                    "taken": ["AM1", "AGA"]
                 },
                 {
                     "name": "Estabilidad II",
                     "id": "EST2",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}],
+                    "approved": ["AM1", "AGA", "F1"],
+                    "taken": ["EST1", "AM2"]
                 },
                 {
                     "name": "Inglés II",
                     "id": "I2",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 48}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 48}],
+                    "approved": ["I1"],
+                    "taken": []
                 }
             ]
         },
@@ -212,42 +286,58 @@
                 {
                     "name": "Economía",
                     "id": "ECO",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 72}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 72}],
+                    "approved": ["IyS"],
+                    "taken": ["IM2"]
                 },
                 {
                     "name": "Elementos de Máquinas",
                     "id": "EM",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}],
+                    "approved": ["EST1", "AM2", "QG"],
+                    "taken": ["IM3", "MM", "MNM", "EST2", "MR"]
                 },
                 {
                     "name": "Tecnología del Calor",
                     "id": "TC",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 72}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 72}],
+                    "approved": ["AM2", "F2"],
+                    "taken": ["TER"]
                 },
                 {
                     "name": "Metrología e Ingeniería de la Calidad",
                     "id": "MIC",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}],
+                    "approved": ["AM2", "AGA", "F2"],
+                    "taken": ["MF", "PyE"]
                 },
                 {
                     "name": "Mecánica de los Fluidos",
                     "id": "MF",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}],
+                    "approved": ["AM2", "F2"],
+                    "taken": ["TER"]
                 },
                 {
                     "name": "Electrotecnia y Máquinas Eléctricas",
                     "id": "EME",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}],
+                    "approved": ["AM1", "AGA", "F1"],
+                    "taken": ["AM2", "F2"]
                 },
                 {
                     "name": "Electrónica y Sistemas de Control",
                     "id": "ESC",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}],
+                    "approved": ["AM1", "AGA", "F1"],
+                    "taken": ["AM2", "F2", "CA"]
                 },
                 {
                     "name": "Estabilidad III",
                     "id": "EST3",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}],
+                    "approved": ["EST1", "AM1", "AGA", "F1"],
+                    "taken": ["EST1"]
                 }
             ]
         },
@@ -257,48 +347,66 @@
                 {
                     "name": "Tecnología de Fabricación",
                     "id": "TF",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 120}],
+                    "approved": ["EST2", "DM", "MM", "MNM"],
+                    "taken": ["EM", "MIC"]
                 },
                 {
                     "name": "Máquinas Alternativas y Turbomáquinas",
                     "id": "MAT",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}],
+                    "approved": ["TER", "F2"],
+                    "taken": ["TC"]
                 },
                 {
                     "name": "Instalaciones Industriales",
                     "id": "II",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}],
+                    "approved": ["EST1", "TER", "IASI"],
+                    "taken": ["MF", "TC", "MF", "EME", "ESC"]
                 },
                 {
                     "name": "Organización Industrial",
                     "id": "OI",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 72}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 72}],
+                    "approved": ["IM2"],
+                    "taken": ["ECO"]
                 },
                 {
                     "name": "Legislación",
                     "id": "LEG",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 72}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 72}],
+                    "approved": ["IyS"],
+                    "taken": ["IM2"]
                 },
                 {
                     "name": "Mantenimiento",
                     "id": "MANT",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 96}],
+                    "approved": ["EST2", "DM", "ME", "TER"],
+                    "taken": ["EM", "MIC", "ECO"]
                 },
                 {
                     "name": "Proyecto Final",
                     "id": "PF",
-                    "duration": [{"name": "Anual", "weeklyHours": 6, "academicHours": 192}]
+                    "duration": [{"name": "Anual", "weeklyHours": 6, "academicHours": 192}],
+                    "approved": ["EST2", "DM", "ME", "MR"],
+                    "taken": ["EM", "MIC", "EME", "ESC"]
                 },
                 {
                     "name": "Práctica Profesional Supervisada",
                     "id": "PPS",
-                    "duration": [{"name": "Anual", "weeklyHours": 6, "academicHours": 150}]
+                    "duration": [{"name": "Anual", "weeklyHours": 6, "academicHours": 150}],
+                    "approved": ["EST2", "DM", "ME", "MR"],
+                    "taken": ["EM", "MIC", "EME", "ESC"]
                 },
                 {
                     "name": "Electivas",
                     "number": 3,
                     "elective": true,
-                    "id": "ELECT"
+                    "id": "ELECT",
+                    "approved": [],
+                    "taken": []
                 }
             ]
         }

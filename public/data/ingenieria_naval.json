@@ -7,22 +7,30 @@
                 {
                     "id": "NAVEG",
                     "name": "Navegación",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "id": "BMIL",
                     "name": "Buques Militares",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "id": "MODPROC",
                     "name": "Modelización de Procesos",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "id": "DNA",
                     "name": "Diseño Naval Asistido",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}],
+                    "approved": [],
+                    "taken": []
                 }
             ]
         },
@@ -32,48 +40,66 @@
                 {
                     "name": "Álgebra y Geometría Analítica",
                     "id": "AGA",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Análisis Matemático I",
                     "id": "AM1",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Física I",
                     "id": "F1",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Química General",
                     "id": "QG",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Introducción a la Ingeniería Naval",
                     "id": "IIN",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Sistemas de Representación",
                     "id": "SR",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Inglés I",
                     "id": "I1",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Fundamentos de Informática",
                     "id": "FI",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Electivas 1er año",
                     "number": 1,
                     "elective": true,
-                    "id": "E1"
+                    "id": "E1",
+                    "approved": [],
+                    "taken": []
                 }
             ]
         },
@@ -83,48 +109,66 @@
                 {
                     "name": "Análisis Matemático II",
                     "id": "AM2",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": [],
+                    "taken": ["AM1", "AGA"]
                 },
                 {
                     "name": "Probabilidad y Estadística",
                     "id": "PyE",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}],
+                    "approved": [],
+                    "taken": ["AM1", "AGA"]
                 },
                 {
                     "name": "Física II",
                     "id": "F2",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": ["AM1", "F1"],
+                    "taken": ["F1", "AM1", "AGA"]
                 },
                 {
                     "name": "Física III",
                     "id": "F3",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}],
+                    "approved": ["AM1", "F1", "F2"],
+                    "taken": ["AM1", "F1"]
                 },
                 {
                     "name": "Análisis Estructural I",
                     "id": "AE1",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}],
+                    "approved": [],
+                    "taken": ["AM1", "F1", "AGA"]
                 },
                 {
                     "name": "Ingeniería y Sociedad",
                     "id": "IyS",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Dibujo Naval",
                     "id": "DN",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}],
+                    "approved": [],
+                    "taken": ["IIN", "SR"]
                 },
                 {
                     "name": "Legislación",
                     "id": "LEG",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Electivas 2do año",
                     "number": 1,
                     "elective": true,
-                    "id": "E2"
+                    "id": "E2",
+                    "approved": [],
+                    "taken": []
                 }
             ]
         },
@@ -134,37 +178,51 @@
                 {
                     "name": "Análisis Estructural II",
                     "id": "AE2",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}],
+                    "approved": ["AGA", "F1"],
+                    "taken": ["AM2", "AE1"]
                 },
                 {
                     "name": "Termodinámica",
                     "id": "TER",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}],
+                    "approved": [],
+                    "taken": ["AM2", "F2"]
                 },
                 {
                     "name": "Mecánica Racional",
                     "id": "MR",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}],
+                    "approved": ["F2"],
+                    "taken": ["AM2"]
                 },
                 {
                     "name": "Teoría del Buque I",
                     "id": "TB1",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}],
+                    "approved": ["F1", "AM1"],
+                    "taken": ["F2", "AM1"]
                 },
                 {
                     "name": "Matemática Aplicada a la Ingeniería",
                     "id": "MAI",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}],
+                    "approved": ["AM1", "AGA"],
+                    "taken": ["AM2"]
                 },
                 {
                     "name": "Electrotecnia y Máquinas Eléctricas",
                     "id": "EME",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 120}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 120}],
+                    "approved": [],
+                    "taken": ["AM2", "F2"]
                 },
                 {
                     "name": "Mecánica de los Fluidos",
                     "id": "MF",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}],
+                    "approved": ["AM1"],
+                    "taken": ["AM2", "F1"]
                 }
             ]
         },
@@ -174,48 +232,66 @@
                 {
                     "name": "Teoría del Buque II",
                     "id": "TB2",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}],
+                    "approved": ["AM2", "DN"],
+                    "taken": ["I1", "TB1", "MAI", "MF"]
                 },
                 {
                     "name": "Elementos de Buques",
                     "id": "EB",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Análisis Estructural III",
                     "id": "AE3",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}],
+                    "approved": ["AE1"],
+                    "taken": ["AE2", "MAI"]
                 },
                 {
                     "name": "Máquinas Alternativas y Turbomáquinas",
                     "id": "MAT",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 120}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 120}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Materiales Navales",
                     "id": "MN",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 120}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 120}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Construcción Naval",
                     "id": "CN",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 120}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 120}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Actividad Naviera",
                     "id": "AN",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}],
+                    "approved": [],
+                    "taken": ["LEG"]
                 },
                 {
                     "name": "Inglés II",
                     "id": "I2",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Electivas 4to año",
                     "number": 1,
                     "elective": true,
-                    "id": "E4"
+                    "id": "E4",
+                    "approved": [],
+                    "taken": []
                 }
             ]
         },
@@ -225,48 +301,66 @@
                 {
                     "name": "Plantas Eléctricas Navales",
                     "id": "PEN",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}],
+                    "approved": ["EME"],
+                    "taken": []
                 },
                 {
                     "name": "Plantas Propulsoras Navales",
                     "id": "PPN",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}],
+                    "approved": ["TER"],
+                    "taken": ["EB", "MAT"]
                 },
                 {
                     "name": "Cálculo de Estructuras de Buques",
                     "id": "CEB",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}],
+                    "approved": ["AE2", "MAI"],
+                    "taken": ["AE3", "MN", "CN"]
                 },
                 {
                     "name": "Mecánica Aplicada a las Máquinas",
                     "id": "MAM",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 120}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 120}],
+                    "approved": ["MR"],
+                    "taken": ["EB", "AE3", "MN"]
                 },
                 {
                     "name": "Proyecto de Buques",
                     "id": "PB",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}],
+                    "approved": ["TB1", "I1"],
+                    "taken": ["TB2", "EB", "CN", "I2"]
                 },
                 {
                     "name": "Organización Industrial",
                     "id": "OI",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}],
+                    "approved": [],
+                    "taken": ["CN"]
                 },
                 {
                     "name": "Soldadura",
                     "id": "SOL",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}],
+                    "approved": ["MN"],
+                    "taken": ["MN"]
                 },
                 {
                     "name": "Análisis por Elementos Finitos",
                     "id": "AEF",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}],
+                    "approved": ["MN"],
+                    "taken": ["AE3"]
                 },
                 {
                     "name": "Electivas 5to año",
                     "number": 2,
                     "elective": true,
-                    "id": "E5"
+                    "id": "E5",
+                    "approved": [],
+                    "taken": []
                 }
             ]
         },
@@ -276,27 +370,37 @@
                 {
                     "name": "Proyecto Final",
                     "id": "PF",
-                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}]
+                    "duration": [{"name": "Anual", "weeklyHours": 4, "academicHours": 128}],
+                    "approved": [],
+                    "taken": ["5to NIVEL"]
                 },
                 {
                     "name": "Embarcaciones Veloces",
                     "id": "EV",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}],
+                    "approved": [],
+                    "taken": ["PB"]
                 },
                 {
                     "name": "Procedimientos de Astilleros",
                     "id": "PA",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}],
+                    "approved": [],
+                    "taken": ["CN", "PB", "OI"]
                 },
                 {
                     "name": "Seguridad, Higiene e Ingeniería Ambiental",
                     "id": "SHIA",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}],
+                    "approved": [],
+                    "taken": ["OI"]
                 },
                 {
                     "name": "Práctica Profesional Supervisada",
                     "id": "PPS",
-                    "duration": [{"name": "Anual", "weeklyHours": 8, "academicHours": 247}]
+                    "duration": [{"name": "Anual", "weeklyHours": 8, "academicHours": 247}],
+                    "approved": [],
+                    "taken": ["ANUAL", "PROYECTO FINAL"]
                 }
             ]
         }

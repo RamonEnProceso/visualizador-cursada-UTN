@@ -1,4 +1,5 @@
 import './style.css'
+import confetti from 'canvas-confetti';
 
 const buttonContainer : HTMLElement = document.getElementById("button_careers_container")!;
 const tableContainer : HTMLElement = document.getElementById("table_of_contents_container")!;
@@ -162,12 +163,18 @@ const renderCareer = (careerId : string) =>{
             }
 
             const createCheckboxes = (dv: HTMLElement, id : string) =>{
+                const divButtons = document.createElement("div");
+                divButtons.className = "subject_checkboxes"
                 const approvedCheck = document.createElement("input");
                 approvedCheck.type="checkbox";
                 approvedCheck.id= `${id}-approved`;
                 approvedCheck.className = "checkbox";
                 approvedCheck.addEventListener("change",()=>{
                     if(approvedCheck.checked){
+                        confetti({
+                            particleCount:90
+                        });
+
                         coursedCheck.checked = true;
                         coursedSubjects[id] = true;
                         updateDivStatus(coursedCheck)
@@ -204,10 +211,12 @@ const renderCareer = (careerId : string) =>{
                     
                 })
 
-                dv.appendChild(coursedCheck);
-                dv.appendChild(coursedLabel);
-                dv.appendChild(approvedCheck);
-                dv.appendChild(approvedLabel)
+                divButtons.appendChild(coursedCheck);
+                divButtons.appendChild(coursedLabel);
+                divButtons.appendChild(approvedCheck);
+                divButtons.appendChild(approvedLabel)
+
+                dv.appendChild(divButtons);
 
             }
 
@@ -263,9 +272,10 @@ const renderCareer = (careerId : string) =>{
 
                         divElective.appendChild(electiveName);
                         divElective.appendChild(electiveDuration)
+                        
 
                         renderDuration(selectedElective, selectedElective.duration?.[0].name ?? "", electiveDuration)
-
+                        electiveDuration.style.display = "inline-block"
                         createCheckboxes(divElective,chosen);
 
                     })

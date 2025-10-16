@@ -15,7 +15,7 @@
     --principal_font:sans-serif;
     --second_font:arial;
     --first-font-size:12px;
-    --second-font-size:calc(var(--first-font-size)*2.75);
+    --second-font-size:calc(var(--first-font-size)*2.4);
     --third-font-size: calc(var(--first-font-size)*2);
     --fourth-font-size: calc(var(--first-font-size)*1.4);
     --fifth-font-size: calc(var(--first-font-size)*0.8);
@@ -191,6 +191,9 @@ footer {
     font-size: var(--first-font-size);
 }
 
+.subject_checkboxes{
+    display: block;
+}
 
 
 
@@ -329,7 +332,14 @@ footer {
     
 }
 
-@media (max-width: 890px){
+@media (max-width: 1000px){
+    :root{
+        --first-font-size:10px;
+    }
+}
+
+
+@media (max-width: 900px){
 
     .title{
         margin-bottom: 20px;
@@ -361,8 +371,8 @@ footer {
         text-align: center;
     }
 
-
 }
+
 
 .coursed{
     opacity: 1;

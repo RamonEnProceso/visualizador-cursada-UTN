@@ -7,22 +7,30 @@
                 {
                     "id": "GDI",
                     "name": "Gestión del Diseño y la Innovación",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "id": "OI",
                     "name": "Organización Industrial",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "id": "PPTI",
                     "name": "Procesos y Productos Textiles Innovadores",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "id": "GI",
                     "name": "Gerenciamiento Industrial",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": [],
+                    "taken": []
                 }
             ]
         },
@@ -32,37 +40,51 @@
                 {
                     "name": "Análisis Matemático I",
                     "id": "AM1",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Álgebra y Geometría Analítica",
                     "id": "AGA",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Ingeniería y Sociedad",
                     "id": "IyS",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Física I",
                     "id": "F1",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Inglés I",
                     "id": "I1",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Química General",
                     "id": "QG",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Introducción a la Industria Textil",
                     "id": "IIT",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": [],
+                    "taken": []
                 }
             ]
         },
@@ -72,42 +94,58 @@
                 {
                     "name": "Análisis Matemático II",
                     "id": "AM2",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": ["AM1"],
+                    "taken": ["AM1", "AGA"]
                 },
                 {
                     "name": "Física II",
                     "id": "F2",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": ["F1"],
+                    "taken": ["AM1", "F1"]
                 },
                 {
                     "name": "Probabilidad y Estadística",
                     "id": "PyE",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}],
+                    "approved": ["AM1"],
+                    "taken": ["AM1", "AGA"]
                 },
                 {
                     "name": "Fundamentos de Química Orgánica y Analítica",
                     "id": "FQOA",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": [],
+                    "taken": ["QG"]
                 },
                 {
                     "name": "Sistemas de Representación",
                     "id": "SR",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}],
+                    "approved": [],
+                    "taken": []
                 },
                 {
                     "name": "Inglés II",
                     "id": "I2",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}],
+                    "approved": [],
+                    "taken": ["I1"]
                 },
                 {
                     "name": "Diseño I",
                     "id": "D1",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}],
+                    "approved": [],
+                    "taken": ["IIT"]
                 },
                 {
                     "name": "Fibras Textiles",
                     "id": "FT",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": [],
+                    "taken": ["QG", "IIT"]
                 }
             ]
         },
@@ -117,42 +155,58 @@
                 {
                     "name": "Cálculo Numérico",
                     "id": "CN",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}],
+                    "approved": [],
+                    "taken": ["AM1", "AGA"]
                 },
                 {
                     "name": "Fundamentos de Informática Textil",
                     "id": "FIT",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}],
+                    "approved": ["IIT"],
+                    "taken": ["IIT"]
                 },
                 {
                     "name": "Fundamentos Eléctricos y Mecánicos",
                     "id": "FEM",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}],
+                    "approved": ["AM1", "F1"],
+                    "taken": ["F2"]
                 },
                 {
                     "name": "Diseño II",
                     "id": "D2",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}],
+                    "approved": ["IIT"],
+                    "taken": ["D1"]
                 },
                 {
                     "name": "Química Textil",
                     "id": "QT",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": ["IIT", "QG"],
+                    "taken": ["FQOA", "FT"]
                 },
                 {
                     "name": "Hilandería de Lana",
                     "id": "HL",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": ["AM1", "AGA", "F1", "IIT"],
+                    "taken": ["FT", "SR"]
                 },
                 {
                     "name": "Termodinámica",
                     "id": "TER",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": ["AM1", "AGA", "F1", "IIT"],
+                    "taken": ["F2"]
                 },
                 {
                     "name": "Hilandería de Algodón",
                     "id": "HA",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": ["AM1", "AGA", "F1", "IIT"],
+                    "taken": ["FT", "SR"]
                 }
             ]
         },
@@ -162,42 +216,58 @@
                 {
                     "name": "Legislación",
                     "id": "LEG",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}],
+                    "approved": [],
+                    "taken": ["FT", "I1", "IIT"]
                 },
                 {
                     "name": "Economía",
                     "id": "ECO",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}],
+                    "approved": ["IyS", "I1", "IIT"],
+                    "taken": ["F2"]
                 },
                 {
                     "name": "Seguridad e Higiene Industrial",
                     "id": "SHI",
-                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}]
+                    "duration": [{"name": "Anual", "weeklyHours": 3, "academicHours": 96}],
+                    "approved": ["FT", "FQOA"],
+                    "taken": ["QT"]
                 },
                 {
                     "name": "Gestión de Calidad e Ingeniería Ambiental",
                     "id": "GCIA",
-                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}]
+                    "duration": [{"name": "Anual", "weeklyHours": 2, "academicHours": 64}],
+                    "approved": ["FT", "PyE"],
+                    "taken": ["QT"]
                 },
                 {
                     "name": "Tejeduría de Punto y sus Ligamentos",
                     "id": "TPL",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": ["IIT"],
+                    "taken": ["FEM", "HA", "HL"]
                 },
                 {
                     "name": "Tintorería y Estampado",
                     "id": "TE",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": ["FT", "FQOA"],
+                    "taken": ["FEM", "QT", "TER"]
                 },
                 {
                     "name": "Confección Industrial",
                     "id": "CI",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": ["FT", "D1", "SR", "QT"],
+                    "taken": ["QT", "D1", "HA", "HL"]
                 },
                 {
                     "name": "Tejeduría de Calada y sus Ligamentos",
                     "id": "TCL",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": ["FT"],
+                    "taken": ["FEM", "HA", "HL"]
                 }
             ]
         },
@@ -207,33 +277,45 @@
                 {
                     "name": "Fabricación de Tejido de Calada",
                     "id": "FTC",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": ["QT", "FIT", "CI", "FEM"],
+                    "taken": ["TCL"]
                 },
                 {
                     "name": "Procesos de ennoblecimiento Textil",
                     "id": "PET",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": ["QT", "TER"],
+                    "taken": ["TE"]
                 },
                 {
                     "name": "Fabricación de Tejido de Punto",
                     "id": "FTP",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": ["QT", "FIT", "CI", "FEM"],
+                    "taken": ["TPL"]
                 },
                 {
                     "name": "Proyecto Final",
                     "id": "PF",
-                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}]
+                    "duration": [{"name": "Anual", "weeklyHours": 5, "academicHours": 160}],
+                    "approved": ["QT", "FEM", "D2", "HA", "TER"],
+                    "taken": ["CI", "LEG", "ECO"]
                 },
                 {
                     "name": "Práctica Profesional Supervisada",
                     "id": "PPS",
-                    "duration": [{"name": "Anual", "weeklyHours": 6, "academicHours": 200}]
+                    "duration": [{"name": "Anual", "weeklyHours": 6, "academicHours": 200}],
+                    "approved": ["QT", "FEM", "D2", "HA", "TER"],
+                    "taken": ["CI", "LEG", "ECO"]
                 },
                 {
                     "name": "Electivas",
                     "number": 2,
                     "elective": true,
-                    "id": "ELECT"
+                    "id": "ELECT",
+                    "approved": [],
+                    "taken": []
                 }
             ]
         }
