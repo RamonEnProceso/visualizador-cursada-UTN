@@ -1,5 +1,5 @@
 import { Career } from "../interfaces/career";
-import { renderCareer } from "./renderCareer";
+import { renderCareer } from "./renderCareers";
 
 export const renderButtons = (buttonContainer : HTMLElement, careersArray: Record<string, Career>, header : HTMLHeadingElement, table : HTMLElement , coursedSubjects : Record<string, boolean>, approvedSubjects : Record<string, boolean>, chosenElectives : Record<string, string[]>) =>{
     buttonContainer.replaceChildren();

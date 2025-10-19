@@ -1,4 +1,4 @@
-import { renderCareer} from '../render/renderCareer';
+import { renderCareer} from '../render/renderCareers';
 import { renderButtons } from '../render/renderButtons';
 import { Career } from '../interfaces/career';
 
