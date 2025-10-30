@@ -8,11 +8,7 @@ export const showOnlyCoursed = () =>{
     const coursed = document.querySelectorAll<HTMLElement>("div.content_subjects:not(.coursed)");
     
     coursed.forEach(div =>{
-        if (div.style.display ==="none"){
-            div.style.display = "inline-block"
-        }else{
-            div.style.display = "none"
-        }
+        div.classList.toggle("hidden");
     })
 }
 

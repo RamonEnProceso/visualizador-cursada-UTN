@@ -10,7 +10,3 @@ export const createDomElement = <K extends keyof HTMLElementTagNameMap>(
     if(text) el.textContent = text;
     return el
 }
-
-export const toggleClass = (el: HTMLElement, className: string) =>{
-    el.classList.toggle(className)
-}

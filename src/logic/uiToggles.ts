@@ -15,42 +15,20 @@ export const buttonOff = () =>{
     const selectDuration = document.querySelectorAll<HTMLElement>(".duration_select");
 
     inputCheckboxes.forEach(cb=>{
-        if (cb.style.display === "none"){
-            cb.style.display = "inline-block"
-        } else{
-            cb.style.display = "none"
-        }
+        cb.classList.toggle("hidden");
     })
     selectSubject.forEach(sl=>{
-        if (sl.style.display === "none"){
-            sl.style.display = "inline-block"
-            spanElective.forEach(sp =>{
-                sp.style.display = "none"
-            })
-        } else{
-            sl.style.display = "none"
-            spanElective.forEach(sp =>{
-                sp.style.display = "inline-block"
-            })
-        }
+        sl.classList.toggle("hidden");
     })
     selectDuration.forEach(sl=>{
-        if (sl.style.display === "none"){
-            sl.style.display = "block"
-        } else{
-            sl.style.display = "none"
-        }
+        sl.classList.toggle("hidden");
     }) 
 
 }
 
 export const durationOff = (input:HTMLInputElement) => {
-    const durationDivs = document.querySelectorAll<HTMLElement>(".content_duration_div");
+    const durationDivs = document.querySelectorAll<HTMLElement>(".content_duration");
     durationDivs.forEach(dv=>{
-        if (input.checked){
-            dv.style.display = "none"
-        } else{
-            dv.style.display = "block"
-        }
+        dv.classList.toggle("hidden")
     })
 }

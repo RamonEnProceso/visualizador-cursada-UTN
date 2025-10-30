@@ -1,83 +1,146 @@
-import confetti from 'canvas-confetti';
 import { Subject, Duration } from "../interfaces/career";
 import { createDomElement } from "../helpers/domHelpers";
-import { updateSubjectVisualState } from '../state/subjectState';
+import { createSubjectCheckboxes } from "./subjects/renderSubjectsCheckboxes";
+import { renderSubjectDuration } from "./subjects/renderSubjectsDuration";
+import { Career } from '../interfaces/career';
+import { renderSubjectRequirements } from "./subjects/renderRequirements";
 
-export const renderSubjectDuration = (subject: Subject, vl:string, dv : HTMLElement) => {
-    const durationOption = subject.duration ? Array.from(subject.duration).find((opt: Duration) => opt.name === vl) : undefined;
-                
-    const sp = createDomElement("span", "duration_name", undefined,durationOption?.name!)
-                
-    const spWeek = createDomElement("span", "duration week");
-    spWeek.appendChild(createDomElement("span", "", undefined, "Por Semana: "));
-    spWeek.appendChild(createDomElement("span","number",undefined,`${durationOption?.weeklyHours!}hs`));
-                
-    const spAcademicHours = createDomElement("span","duration academic_hours")
-    spAcademicHours.appendChild(createDomElement("span", "", undefined, "Total (Cátedra): "))
-    spAcademicHours.appendChild(createDomElement("span", "number", undefined, `${durationOption?.academicHours!}hs`))
-
-    dv.appendChild(sp);
-    dv.appendChild(spWeek);
-    dv.appendChild(spAcademicHours);
-    dv.className = "content_duration_div";
-
-    //Checkear esto luego para corregir el bug de que no se muestra la duración correctamente
-    dv.style.display = "none";
-}  
-
-export const createSubjectCheckboxes = (
-    dv: HTMLElement, 
-    id : string, 
-    coursedSubjects : Record<string, boolean>, 
+export const renderSubjects = (
+    subject : Subject, 
+    careerId:string,
+    levelHtml:HTMLElement,
+    electiveNumber : number, 
+    electivesSelect:HTMLElement, 
+    careersArray: Record<string, Career>,
+    coursedSubjects : Record<string, boolean>,  
     approvedSubjects : Record<string, boolean>, 
-    parentContainer:HTMLElement
-) =>{
-    const divButtons = createDomElement("div","subject_checkboxes")
+    chosenElectives : Record<string, string[]>) =>{
 
-    const approvedCheck = createDomElement("input","checkbox",`${id}-approved`);
-    approvedCheck.type="checkbox";
+    const div = createDomElement("div", "content_subjects none");
+    const divSpan = createDomElement("span","content_name",undefined,subject.name)
+    div.appendChild(divSpan);
 
-    approvedCheck.addEventListener("change",()=>{
-        if(approvedCheck.checked){
-            confetti({
-                particleCount:90
-            });
-            coursedCheck.checked = true;
-            coursedSubjects[id] = true;
-            updateSubjectVisualState(coursedCheck, parentContainer);
+    const duration = createDomElement("div","content_duration");
+    const durationDiv = createDomElement("div","content_duration_div");
+
+    if ((subject.duration?.length ?? 0) > 1){
+        const sl = document.createElement("select")
+        sl.className = "duration_select"
+        subject.duration?.forEach(option =>{
+            const op = createDomElement("option","",undefined,option.name);
+            op.value = option.name;
+            sl.appendChild(op);
+        })
+        renderSubjectDuration(subject, subject.duration?.[0].name ?? "", durationDiv)
+        sl.addEventListener("change",()=>{
+        durationDiv.textContent = ""
+        renderSubjectDuration(subject, sl.value, durationDiv)
+        })
+        duration.appendChild(sl);
+    }else{
+    if (!subject.elective){
+        renderSubjectDuration(subject, subject.duration?.[0].name ?? "", durationDiv)
+    }
+    }
+
+    duration.appendChild(durationDiv)
+    div.appendChild(duration)
+
+    if(subject.elective){
+                //Acá debo poner para elegir la cantidad de electivas
+        const number = subject.number || 1;
+
+        for (let i = 0; number > i; i++){
+        const divElective = document.createElement("div");
+        divElective.className="elective_div";
+        const clonedSelect = electivesSelect.cloneNode(true) as HTMLSelectElement;
+        clonedSelect.id = `elective-select-${electiveNumber}`
+        clonedSelect.className = "subject_select"
+        electiveNumber++;
+        divElective.appendChild(clonedSelect);
+
+        const span = document.createElement("span");
+        span.textContent="--No se ha seleccionado una materia--";
+        span.className="span_elective"
+        span.style.display = "none";
+        divElective.appendChild(span);
+
+        clonedSelect.addEventListener("change",()=>{
+        divElective.innerHTML="";
+        divElective.appendChild(clonedSelect);
+                        
+        const electiveDuration = document.createElement("div")
+        electiveDuration.className = "content_duration_div"
+
+        const chosen = clonedSelect.value; 
+
+        if (!chosenElectives[subject.id]) {
+            chosenElectives[subject.id] = [];
         }
-        approvedSubjects[id] = approvedCheck.checked;
-        updateSubjectVisualState(approvedCheck,parentContainer);
-        //darkNotApproved();
+
+        chosenElectives[subject.id][i] = chosen;
+
+        divElective.querySelectorAll("input").forEach(input => input.remove());
+
+        const subjects = careersArray[careerId]["levels"][0]["subjects"] as Subject[];
+        const selectedElective = subjects.find(subject => subject.id === chosen)|| {
+            id: "",
+            name: "",
+            duration: []
+        };
+
+        const electiveName = document.createElement("span");
+        electiveName.className = "elective_name"
+        electiveName.textContent = selectedElective.name;
+
+        div.style.padding = "0";
+        divSpan.style.display = "none";
+
+        divElective.appendChild(electiveName);
+        divElective.appendChild(electiveDuration)
+                        
+
+        renderSubjectDuration(selectedElective, selectedElective.duration?.[0].name ?? "", electiveDuration)
+        electiveDuration.style.display = "inline-block"
+        createSubjectCheckboxes(divElective,chosen, coursedSubjects, approvedSubjects, div);
+
+        })
+        div.appendChild(divElective)
+        }
+
+                
+        }
+
+    levelHtml.appendChild(div);
+
+    if (!subject.elective){
+         createSubjectCheckboxes(div,subject.id, coursedSubjects, approvedSubjects, div);
+    }
+
+
+    const subjectId = createDomElement("div","subject_id", undefined, subject.id)
+    const divSubjectsRequirements = createDomElement("div","subject_requirements");
+
+    div.addEventListener("mouseenter",()=>{
+        div.appendChild(subjectId);
+
+        subjectId.style.opacity = "0";
+        void subjectId.offsetWidth;
+        subjectId.style.opacity = "1";
+
+        div.appendChild(divSubjectsRequirements);
+        renderSubjectRequirements(subject,divSubjectsRequirements, approvedSubjects, coursedSubjects)
+        
+        divSubjectsRequirements.style.opacity = "0";
+        void divSubjectsRequirements.offsetWidth;
+        divSubjectsRequirements.style.opacity = "1";
+
+    })
+    div.addEventListener("mouseleave",()=>{
+        div.removeChild(subjectId)
+        divSubjectsRequirements.innerHTML="";
+        div.removeChild(divSubjectsRequirements)
     })
 
-    const approvedLabel = createDomElement("label","checkbox_label",undefined,"Aprobado");
-    approvedLabel.htmlFor = `${id}-approved`;
-                        
-    const coursedCheck = createDomElement("input", "checkbox", `${id}-coursed`);
-    coursedCheck.type="checkbox";
-    
 
-    const coursedLabel = createDomElement("label", "checkbox_label", undefined, "Cursado");
-    coursedLabel.htmlFor = `${id}-coursed`
-                
-    coursedSubjects[id] = coursedCheck.checked;
-
-    coursedCheck.addEventListener("change",()=>{
-        if(!coursedCheck.checked){
-            approvedCheck.checked = false;
-            approvedSubjects[id] = false;
-            //updateSubjectVisualState(approvedCheck);
-            }
-            coursedSubjects[id] = coursedCheck.checked;
-            //updateSubjectVisualState(coursedCheck);
-            //darkNotApproved();
-        })
-
-        divButtons.appendChild(coursedCheck);
-        divButtons.appendChild(coursedLabel);
-        divButtons.appendChild(approvedCheck);
-        divButtons.appendChild(approvedLabel)
-
-    dv.appendChild(divButtons);
 }

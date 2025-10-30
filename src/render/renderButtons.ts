@@ -1,5 +1,7 @@
 import { Career } from "../interfaces/career";
 import { renderCareer } from "./renderCareers";
+import { clearFilters } from "../logic/filters";
+import { inputsFiltersButton } from "../main";
 
 export const renderButtons = (buttonContainer : HTMLElement, careersArray: Record<string, Career>, header : HTMLHeadingElement, table : HTMLElement , coursedSubjects : Record<string, boolean>, approvedSubjects : Record<string, boolean>, chosenElectives : Record<string, string[]>) =>{
     buttonContainer.replaceChildren();
@@ -16,7 +18,10 @@ export const renderButtons = (buttonContainer : HTMLElement, careersArray: Recor
         lb.textContent = careersArray[careerKey]["name"];
         lb.htmlFor = careerKey;
         lb.className = "career_label";
-        rd.addEventListener("click", () =>{renderCareer(careerKey,careersArray,header,table,coursedSubjects,approvedSubjects,chosenElectives)})
+        rd.addEventListener("click", () =>{
+            renderCareer(careerKey,careersArray,header,table,coursedSubjects,approvedSubjects,chosenElectives)
+            clearFilters(inputsFiltersButton);
+        })
         li.appendChild(rd);
         li.appendChild(lb);
         buttonContainer.appendChild(li);

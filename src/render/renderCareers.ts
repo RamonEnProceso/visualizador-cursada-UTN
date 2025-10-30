@@ -1,6 +1,6 @@
 import { Career, Subject, Level } from '../interfaces/career';
 import { createDomElement } from '../helpers/domHelpers';
-import { renderSubjectDuration, createSubjectCheckboxes } from './renderSubjects';
+import { renderSubjects } from './renderSubjects';
 
 export const renderCareer = (
     careerId : string, 
@@ -50,108 +50,7 @@ export const renderCareer = (
 
         //Acá se crean las distintas materias
         level.subjects.forEach((subject : Subject)=>{
-
-            const div = createDomElement("div", "content_subjects none");
-            const divSpan = createDomElement("span","content_name",undefined,subject.name)
-            div.appendChild(divSpan);
-
-            const duration = createDomElement("div","content_duration");
-            const durationDiv = createDomElement("div","content_duration_div");
-
-            if ((subject.duration?.length ?? 0) > 1){
-                const sl = document.createElement("select")
-                sl.className = "duration_select"
-                subject.duration?.forEach(option =>{
-                    const op = createDomElement("option","",undefined,option.name);
-                    op.value = option.name;
-                    sl.appendChild(op);
-                })
-                renderSubjectDuration(subject, subject.duration?.[0].name ?? "", durationDiv)
-                sl.addEventListener("change",()=>{
-                    durationDiv.textContent = ""
-                    renderSubjectDuration(subject, sl.value, durationDiv)
-                })
-                duration.appendChild(sl);
-            }else{
-                if (!subject.elective){
-                    renderSubjectDuration(subject, subject.duration?.[0].name ?? "", durationDiv)
-                }
-            }
-
-            duration.appendChild(durationDiv)
-            div.appendChild(duration)
-
-            if(subject.elective){
-                //Acá debo poner para elegir la cantidad de electivas
-                const number = subject.number || 1;
-
-                for (let i = 0; number > i; i++){
-                    const divElective = document.createElement("div");
-                    divElective.className="elective_div";
-                    const clonedSelect = electivesSelect.cloneNode(true) as HTMLSelectElement;
-                    clonedSelect.id = `elective-select-${electiveNumber}`
-                    clonedSelect.className = "subject_select"
-                    electiveNumber++;
-                    divElective.appendChild(clonedSelect);
-
-                    const span = document.createElement("span");
-                    span.textContent="--No se ha seleccionado una materia--";
-                    span.className="span_elective"
-                    span.style.display = "none";
-                    divElective.appendChild(span);
-
-                    clonedSelect.addEventListener("change",()=>{
-                        divElective.innerHTML="";
-                        divElective.appendChild(clonedSelect);
-                        
-                        const electiveDuration = document.createElement("div")
-                        electiveDuration.className = "content_duration_div"
-
-                        const chosen = clonedSelect.value; 
-
-                        if (!chosenElectives[subject.id]) {
-                            chosenElectives[subject.id] = [];
-                        }
-
-                        chosenElectives[subject.id][i] = chosen;
-
-                        divElective.querySelectorAll("input").forEach(input => input.remove());
-
-                        const subjects = careersArray[careerId]["levels"][0]["subjects"] as Subject[];
-                        const selectedElective = subjects.find(subject => subject.id === chosen)|| {
-                            id: "",
-                            name: "",
-                            duration: []
-                        };
-
-                        const electiveName = document.createElement("span");
-                        electiveName.className = "elective_name"
-                        electiveName.textContent = selectedElective.name;
-
-                        div.style.padding = "0";
-                        divSpan.style.display = "none";
-
-                        divElective.appendChild(electiveName);
-                        divElective.appendChild(electiveDuration)
-                        
-
-                        renderSubjectDuration(selectedElective, selectedElective.duration?.[0].name ?? "", electiveDuration)
-                        electiveDuration.style.display = "inline-block"
-                        createSubjectCheckboxes(divElective,chosen, coursedSubjects, approvedSubjects, div);
-
-                    })
-                    div.appendChild(divElective)
-                }
-
-                
-            }
-
-            levelHtml.appendChild(div);
-
-            if (!subject.elective){
-                createSubjectCheckboxes(div,subject.id, coursedSubjects, approvedSubjects, div);
-            }
-
+            renderSubjects(subject,careerId,levelHtml,electiveNumber,electivesSelect,careersArray,coursedSubjects,approvedSubjects,chosenElectives)
         })
 
         container.style.gridTemplateColumns = `repeat(${numLevels}, 1fr)`

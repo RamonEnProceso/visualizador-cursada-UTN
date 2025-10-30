@@ -19,6 +19,8 @@ export const approvedSubjects: Record<string, boolean> = {};
 export const coursedSubjects: Record<string, boolean> = {};
 export const chosenElectives: Record<string, string[]> = {};
 
+export const inputsFiltersButton = [inputButtonOff, inputDurationOff, inputOnlyCoursed, inputDarkNotApproved]
+
 window.addEventListener('resize', () => changeCareersSize(tableContainer));
 window.addEventListener('load', () => changeCareersSize(tableContainer));
 

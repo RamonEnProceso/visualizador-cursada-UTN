@@ -14,6 +14,8 @@ export interface Subject {
     duration?: Duration[];
     elective?: boolean;
     number?: number;
+    approved?: string[];
+    taken?: string[];
 }
 
 export interface Duration {
