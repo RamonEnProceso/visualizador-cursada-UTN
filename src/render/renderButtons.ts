@@ -1,9 +1,17 @@
 import { Career } from "../interfaces/career";
 import { renderCareer } from "./renderCareers";
 import { clearFilters } from "../logic/filters";
-import { inputsFiltersButton } from "../main";
 
-export const renderButtons = (buttonContainer : HTMLElement, careersArray: Record<string, Career>, header : HTMLHeadingElement, table : HTMLElement , coursedSubjects : Record<string, boolean>, approvedSubjects : Record<string, boolean>, chosenElectives : Record<string, string[]>) =>{
+export const renderButtons = (
+    buttonContainer : HTMLElement,
+    careersArray: Record<string, Career>,
+    header : HTMLHeadingElement, 
+    table : HTMLElement , 
+    coursedSubjects : Record<string, boolean>, 
+    approvedSubjects : Record<string, boolean>, 
+    chosenElectives : Record<string, string[]>,
+    inputsFiltersButton : HTMLInputElement[]
+    ) =>{
     buttonContainer.replaceChildren();
 
     Object.keys(careersArray).forEach((careerKey)=>{

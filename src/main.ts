@@ -19,7 +19,7 @@ export const approvedSubjects: Record<string, boolean> = {};
 export const coursedSubjects: Record<string, boolean> = {};
 export const chosenElectives: Record<string, string[]> = {};
 
-export const inputsFiltersButton = [inputButtonOff, inputDurationOff, inputOnlyCoursed, inputDarkNotApproved]
+const inputsFiltersButton = [inputButtonOff, inputDurationOff, inputOnlyCoursed, inputDarkNotApproved]
 
 window.addEventListener('resize', () => changeCareersSize(tableContainer));
 window.addEventListener('load', () => changeCareersSize(tableContainer));
@@ -40,5 +40,5 @@ inputDurationOff.addEventListener("change", () =>{
     durationOff(inputButtonOff);
 })
 
-careerButtonsRender(careerOrder, careersData, nameContainer, tableContainer,coursedSubjects,approvedSubjects,chosenElectives,buttonContainer);
+careerButtonsRender(careerOrder, careersData, nameContainer, tableContainer,coursedSubjects,approvedSubjects,chosenElectives,buttonContainer,inputsFiltersButton);
 changeCareersSize(tableContainer);
