@@ -1,8 +1,9 @@
-import './styles/style.css'
+import './styles/style.css';
 import { Career } from './interfaces/career';
 import { careerButtonsRender } from './logic/dataLoader';
 import { durationOff, buttonOff, changeCareersSize } from './logic/uiToggles';
 import { showOnlyCoursed, darkNotApproved } from './logic/filters';
+import { gsap } from "gsap";
 
 const buttonContainer : HTMLElement = document.getElementById("button_careers_container")!;
 const tableContainer : HTMLElement = document.getElementById("table_of_contents_container")!;
@@ -42,3 +43,5 @@ inputDurationOff.addEventListener("change", () =>{
 
 careerButtonsRender(careerOrder, careersData, nameContainer, tableContainer,coursedSubjects,approvedSubjects,chosenElectives,buttonContainer,inputsFiltersButton);
 changeCareersSize(tableContainer);
+
+gsap.from(".aclaracion", {opacity: 0, duration: 0.75, y:"10", ease:"power3.out"})
