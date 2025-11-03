@@ -47,8 +47,7 @@ footer {
 }
 
 .title h1{
-    display: inline-block;
-    width: 70%;
+    text-align: center;
 }
 
 .title img.bouncing{
