@@ -183,7 +183,7 @@ footer {
 }
 
 .table_of_contents_container:hover .content_subjects:not(:hover){
-    filter: brightness(65%) contrast(90%) blur(1px) saturate(0.5);
+    filter: brightness(55%) contrast(250%) blur(1px) saturate(0.5);
 }
 
 .table_of_contents_container:hover .content_subjects:hover{
@@ -298,7 +298,9 @@ footer {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-bottom: 0;
+    z-index: 2;
 }
+
 
 
 
@@ -306,6 +308,9 @@ footer {
     margin-left: 0;
 }
 
+.filter_label{
+    display: inline-block;
+}
 
 .filter_label:hover {
     background-color: var(--second_color);
@@ -336,6 +341,18 @@ footer {
 .checkbox_label:active{
     transform: scale(0.9);
     
+}
+
+.button_careers_container:hover .career_label:active{
+    transform: scaleY(1.2) scaleX(0.93) translateY(-1%);
+}
+
+.button_careers_container:hover .career_label:not(:hover){
+    transform: translateY(15%);
+}
+
+.career_label:hover{
+    transform: translateY(-2%) scaleY(1.1);
 }
 
 .checkbox:checked + label, .filter_button:checked + label, .career_radio:checked + label{
@@ -469,6 +486,10 @@ footer {
         border: 2px solid var(--second_color);
         border-radius: 1mm;
         text-align: center;
+    }
+
+    .career_label:active{
+        transform: scale(0.9);
     }
 
 }

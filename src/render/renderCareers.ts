@@ -1,6 +1,9 @@
 import { Career, Subject, Level } from '../interfaces/career';
 import { createDomElement } from '../helpers/domHelpers';
 import { renderSubjects } from './renderSubjects';
+import {animationGsapTable} from '../styles/animations'
+import { electiveNumberReset } from '../helpers/storageHelpers';
+import { changeCareersSize } from '../logic/uiToggles';
 
 export const renderCareer = (
     careerId : string, 
@@ -10,8 +13,11 @@ export const renderCareer = (
     coursedSubjects : Record<string, boolean>, 
     approvedSubjects : Record<string, boolean>, 
     chosenElectives : Record<string, string[]>) =>{
-    const career = careersArray[careerId];
 
+    const career = careersArray[careerId];
+    
+    
+    animationGsapTable(container);
     if (!career) return;
 
     header.textContent = careersArray[careerId]["name"];
@@ -22,9 +28,12 @@ export const renderCareer = (
 
     const careerLevels = careersArray[careerId]["levels"];
     let numLevels : number = 0;
+    let electiveNumber = 0;
 
     //Crea el select de las diferentes electivas
     const electivesSelect = createDomElement("select","elective","elective-select");
+
+    electiveNumberReset();
 
     careerLevels.forEach((level : Level)=>{
         
@@ -46,11 +55,11 @@ export const renderCareer = (
         levelHtml.appendChild(headerHtml);
         numLevels++;
 
-        let electiveNumber = 0;
+        
 
         //Acá se crean las distintas materias
         level.subjects.forEach((subject : Subject)=>{
-            renderSubjects(subject,careerId,levelHtml,electiveNumber,electivesSelect,careersArray,coursedSubjects,approvedSubjects,chosenElectives)
+            renderSubjects(subject,careerId,levelHtml,electivesSelect,careersArray,coursedSubjects,approvedSubjects,chosenElectives)
         })
 
         container.style.gridTemplateColumns = `repeat(${numLevels}, 1fr)`
@@ -59,6 +68,7 @@ export const renderCareer = (
         container.appendChild(levelHtml);
         //changeCareersSize();
     })
+    changeCareersSize(container)
     //clearFilters();
     //inputDurationOff.checked = true;
     //durationOff();

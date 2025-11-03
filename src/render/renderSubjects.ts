@@ -4,12 +4,13 @@ import { createSubjectCheckboxes } from "./subjects/renderSubjectsCheckboxes";
 import { renderSubjectDuration } from "./subjects/renderSubjectsDuration";
 import { Career } from '../interfaces/career';
 import { renderSubjectRequirements } from "./subjects/renderRequirements";
+import { electiveNumber, electiveNumberAdd } from "../helpers/storageHelpers";
+import { durationOffState } from "../logic/uiToggles";
 
 export const renderSubjects = (
     subject : Subject, 
     careerId:string,
     levelHtml:HTMLElement,
-    electiveNumber : number, 
     electivesSelect:HTMLElement, 
     careersArray: Record<string, Career>,
     coursedSubjects : Record<string, boolean>,  
@@ -23,9 +24,12 @@ export const renderSubjects = (
     const duration = createDomElement("div","content_duration");
     const durationDiv = createDomElement("div","content_duration_div");
 
+    
+
     if ((subject.duration?.length ?? 0) > 1){
         const sl = document.createElement("select")
         sl.className = "duration_select"
+        sl.name = "duration"
         subject.duration?.forEach(option =>{
             const op = createDomElement("option","",undefined,option.name);
             op.value = option.name;
@@ -54,15 +58,14 @@ export const renderSubjects = (
         const divElective = document.createElement("div");
         divElective.className="elective_div";
         const clonedSelect = electivesSelect.cloneNode(true) as HTMLSelectElement;
-        clonedSelect.id = `elective-select-${electiveNumber}`
+        clonedSelect.id = `elective-select-${careerId}-${electiveNumber}`
         clonedSelect.className = "subject_select"
-        electiveNumber++;
+        electiveNumberAdd()
         divElective.appendChild(clonedSelect);
 
         const span = document.createElement("span");
         span.textContent="--No se ha seleccionado una materia--";
         span.className="span_elective"
-        span.style.display = "none";
         divElective.appendChild(span);
 
         clonedSelect.addEventListener("change",()=>{
@@ -70,7 +73,10 @@ export const renderSubjects = (
         divElective.appendChild(clonedSelect);
                         
         const electiveDuration = document.createElement("div")
-        electiveDuration.className = "content_duration_div"
+        electiveDuration.className = "content_duration"
+        if (durationOffState){
+            electiveDuration.classList.add("hidden")
+        }
 
         const chosen = clonedSelect.value; 
 
