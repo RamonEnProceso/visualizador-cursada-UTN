@@ -4,8 +4,9 @@ import { createSubjectCheckboxes } from "./subjects/renderSubjectsCheckboxes";
 import { renderSubjectDuration } from "./subjects/renderSubjectsDuration";
 import { Career } from '../interfaces/career';
 import { renderSubjectRequirements } from "./subjects/renderRequirements";
-import { electiveNumber, electiveNumberAdd } from "../helpers/storageHelpers";
+import { electiveNumber, electiveNumberAdd, storageElectivesLoad } from "../helpers/storageHelpers";
 import { durationOffState } from "../logic/uiToggles";
+import { storageElectives, storageDataLoad } from "../helpers/storageHelpers";
 
 export const renderSubjects = (
     subject : Subject, 
@@ -23,8 +24,6 @@ export const renderSubjects = (
 
     const duration = createDomElement("div","content_duration");
     const durationDiv = createDomElement("div","content_duration_div");
-
-    
 
     if ((subject.duration?.length ?? 0) > 1){
         const sl = document.createElement("select")
@@ -51,7 +50,7 @@ export const renderSubjects = (
     div.appendChild(duration)
 
     if(subject.elective){
-                //Acá debo poner para elegir la cantidad de electivas
+
         const number = subject.number || 1;
 
         for (let i = 0; number > i; i++){
@@ -64,51 +63,95 @@ export const renderSubjects = (
         divElective.appendChild(clonedSelect);
 
         const span = document.createElement("span");
-        span.textContent="--No se ha seleccionado una materia--";
+        span.textContent="--Falta seleccionar una electiva--";
         span.className="span_elective"
         divElective.appendChild(span);
 
+        clonedSelect.value = (chosenElectives[subject.id]?.[i]) || "";
+
+        if(clonedSelect.value !== ""){
+
+            divElective.innerHTML="";
+            divElective.appendChild(clonedSelect);
+
+            const electiveDuration = document.createElement("div")
+            electiveDuration.className = "content_duration"
+            if (durationOffState){
+                electiveDuration.classList.add("hidden")
+            }
+
+            divElective.querySelectorAll("input").forEach(input => input.remove());
+
+            const chosen = clonedSelect.value;
+
+            const subjects = careersArray[careerId]["levels"][0]["subjects"] as Subject[];
+            const selectedElective = subjects.find(subject => subject.id === chosen)|| {
+                id: "",
+                name: "",
+                duration: []
+            };
+
+            const electiveName = document.createElement("span");
+            electiveName.className = "elective_name"
+            electiveName.textContent = selectedElective.name;
+
+            div.style.padding = "0";
+            divSpan.style.display = "none";
+
+            divElective.appendChild(electiveName);
+            divElective.appendChild(electiveDuration)
+                            
+
+            renderSubjectDuration(selectedElective, selectedElective.duration?.[0].name ?? "", electiveDuration)
+            electiveDuration.style.display = "inline-block"
+            createSubjectCheckboxes(divElective,subject,chosen, coursedSubjects, approvedSubjects, div);
+
+
+        }
+
         clonedSelect.addEventListener("change",()=>{
-        divElective.innerHTML="";
-        divElective.appendChild(clonedSelect);
-                        
-        const electiveDuration = document.createElement("div")
-        electiveDuration.className = "content_duration"
-        if (durationOffState){
-            electiveDuration.classList.add("hidden")
-        }
+            divElective.innerHTML="";
+            divElective.appendChild(clonedSelect);
+                            
+            const electiveDuration = document.createElement("div")
+            electiveDuration.className = "content_duration"
+            if (durationOffState){
+                electiveDuration.classList.add("hidden")
+            }
 
-        const chosen = clonedSelect.value; 
+            
+            const chosen = clonedSelect.value;
 
-        if (!chosenElectives[subject.id]) {
-            chosenElectives[subject.id] = [];
-        }
+            if (!chosenElectives[subject.id]) {
+                chosenElectives[subject.id] = [];
+            }
 
-        chosenElectives[subject.id][i] = chosen;
+            chosenElectives[subject.id][i] = chosen;
+            storageElectives(chosenElectives);
 
-        divElective.querySelectorAll("input").forEach(input => input.remove());
+            divElective.querySelectorAll("input").forEach(input => input.remove());
 
-        const subjects = careersArray[careerId]["levels"][0]["subjects"] as Subject[];
-        const selectedElective = subjects.find(subject => subject.id === chosen)|| {
-            id: "",
-            name: "",
-            duration: []
-        };
+            const subjects = careersArray[careerId]["levels"][0]["subjects"] as Subject[];
+            const selectedElective = subjects.find(subject => subject.id === chosen)|| {
+                id: "",
+                name: "",
+                duration: []
+            };
 
-        const electiveName = document.createElement("span");
-        electiveName.className = "elective_name"
-        electiveName.textContent = selectedElective.name;
+            const electiveName = document.createElement("span");
+            electiveName.className = "elective_name"
+            electiveName.textContent = selectedElective.name;
 
-        div.style.padding = "0";
-        divSpan.style.display = "none";
+            div.style.padding = "0";
+            divSpan.style.display = "none";
 
-        divElective.appendChild(electiveName);
-        divElective.appendChild(electiveDuration)
-                        
+            divElective.appendChild(electiveName);
+            divElective.appendChild(electiveDuration)
+                            
 
-        renderSubjectDuration(selectedElective, selectedElective.duration?.[0].name ?? "", electiveDuration)
-        electiveDuration.style.display = "inline-block"
-        createSubjectCheckboxes(divElective,chosen, coursedSubjects, approvedSubjects, div);
+            renderSubjectDuration(selectedElective, selectedElective.duration?.[0].name ?? "", electiveDuration)
+            electiveDuration.style.display = "inline-block"
+            createSubjectCheckboxes(divElective,subject,chosen, coursedSubjects, approvedSubjects, div);
 
         })
         div.appendChild(divElective)
@@ -120,7 +163,7 @@ export const renderSubjects = (
     levelHtml.appendChild(div);
 
     if (!subject.elective){
-         createSubjectCheckboxes(div,subject.id, coursedSubjects, approvedSubjects, div);
+         createSubjectCheckboxes(div,subject,subject.id, coursedSubjects, approvedSubjects, div);
     }
 
 

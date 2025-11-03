@@ -24,9 +24,9 @@ Aplicación web interactiva que permite **visualizar, simular y gestionar el ava
 - ✅ Agregar botones _Cursado / Aprobado_ para cada materia
 - ✅ Agregar más carreras
 - ✅ Modularizar código
+- ✅ Agregar visualizar correlatividades
+- ✅ Agregar guardado local
 - 🔄 Mejorar interfaz Mobile
-- 🔄 Agregar visualizar correlatividades
-- 🔄 Agregar guardado local
 - 🔄 Agregar pantalla de carga
 
 ## 🎯 Objetivo

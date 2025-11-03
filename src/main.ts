@@ -1,9 +1,10 @@
 import './styles/style.css';
-import { Career } from './interfaces/career';
+import { Career, Data } from './interfaces/career';
 import { careerButtonsRender } from './logic/dataLoader';
-import { durationOff, buttonOff, changeCareersSize } from './logic/uiToggles';
-import { showOnlyCoursed, darkNotApproved } from './logic/filters';
+import { durationOff, buttonOff, changeCareersSize, buttonOffState, durationOffState } from './logic/uiToggles';
 import { animationGsap } from './styles/animations';
+import { storageDataLoad, storageElectivesLoad } from './helpers/storageHelpers';
+
 
 
 const buttonContainer : HTMLElement = document.getElementById("button_careers_container")!;
@@ -12,33 +13,27 @@ const nameContainer : HTMLHeadingElement = document.getElementById("career-name"
 const buttonsFilters = document.querySelectorAll(".filters label");
 const inputButtonOff : HTMLInputElement = document.getElementById("buttons-off") as HTMLInputElement;
 const inputDurationOff : HTMLInputElement = document.getElementById("duration-off") as HTMLInputElement;
-const inputOnlyCoursed : HTMLInputElement = document.getElementById("only-coursed") as HTMLInputElement;
-const inputDarkNotApproved : HTMLInputElement = document.getElementById("dark-not-approved") as HTMLInputElement;
 
 const careerOrder : string[] = ["textil","naval","quimica","electrica","electronica","civil","mecanica","industrial","sistemas"];
 
 const careersData: Record<string, Career> = {};
-export const approvedSubjects: Record<string, boolean> = {};
-export const coursedSubjects: Record<string, boolean> = {};
-export const chosenElectives: Record<string, string[]> = {};
 
-const inputsFiltersButton = [inputButtonOff, inputDurationOff, inputOnlyCoursed, inputDarkNotApproved]
+const data : Data = storageDataLoad()
+const coursedSubjects: Record<string, boolean> = data?.coursed || {};
+const approvedSubjects: Record<string, boolean> = data?.approved || {};
+const chosenElectives: Record<string, string[]> = storageElectivesLoad();
+
+const inputsFiltersButton = [inputButtonOff, inputDurationOff]
 
 window.addEventListener('resize', () => changeCareersSize(tableContainer));
 window.addEventListener('load', () => changeCareersSize(tableContainer));
 
+
+inputButtonOff.checked = buttonOffState;
 inputButtonOff.addEventListener("change", ()=>{
     buttonOff(inputButtonOff);
 })
-
-inputOnlyCoursed.addEventListener("change",()=>{
-    showOnlyCoursed();
-})
-
-inputDarkNotApproved.addEventListener("change",()=>{
-    darkNotApproved(inputDarkNotApproved);
-})
-
+inputDurationOff.checked = durationOffState;
 inputDurationOff.addEventListener("change", () =>{
     durationOff(inputDurationOff);
 })

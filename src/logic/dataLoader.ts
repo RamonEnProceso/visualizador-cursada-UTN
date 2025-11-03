@@ -1,6 +1,7 @@
 import { renderCareer} from '../render/renderCareers';
 import { renderButtons } from '../render/renderButtons';
 import { Career } from '../interfaces/career';
+import { careerSelected } from '../render/renderButtons';
 
 const loadCareer = async (
   name: string,
@@ -34,4 +35,11 @@ export const careerButtonsRender = async (
     for (const career of order){
         await loadCareer(career, `/data/ingenieria_${career}.json`, careersData, nameContainer, tableContainer, coursedSubjects, approvedSubjects, chosenElectives, buttonContainer, inputsFiltersButton)
     }
+
+    const input = document.getElementById(careerSelected) as HTMLInputElement;
+    input.checked =true;
+    await setTimeout(()=>{
+      renderCareer(careerSelected,careersData,nameContainer,tableContainer,coursedSubjects,approvedSubjects,chosenElectives)
+    },150)
+
 }

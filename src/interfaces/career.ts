@@ -23,3 +23,8 @@ export interface Duration {
     weeklyHours: number;
     academicHours: number;
 }
+
+export interface Data {
+    coursed?:Record<string,boolean>;
+    approved?:Record<string,boolean>;
+}

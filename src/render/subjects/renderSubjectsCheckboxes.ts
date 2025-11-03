@@ -1,9 +1,13 @@
 import { createDomElement } from "../../helpers/domHelpers";
+import { Subject } from "../../interfaces/career";
 import { updateSubjectVisualState } from "../../state/subjectState";
+import { checkApprovedCoursed } from "../../logic/checkApprovedCoursed";
+import { storageData } from "../../helpers/storageHelpers";
 import confetti from 'canvas-confetti';
 
 export const createSubjectCheckboxes = (
     dv: HTMLElement, 
+    subject : Subject,
     id : string, 
     coursedSubjects : Record<string, boolean>, 
     approvedSubjects : Record<string, boolean>, 
@@ -16,6 +20,11 @@ export const createSubjectCheckboxes = (
 
     approvedCheck.checked = !!approvedSubjects[id];
     approvedCheck.addEventListener("change",()=>{
+        if(checkApprovedCoursed(subject,coursedSubjects,approvedSubjects)){
+            alert(checkApprovedCoursed(subject,coursedSubjects,approvedSubjects)) //Cambiar luego por alerta personalizada
+            approvedCheck.checked=false;
+            coursedCheck.checked=false;
+        }
         if(approvedCheck.checked){
             confetti({
                 particleCount:90
@@ -25,6 +34,7 @@ export const createSubjectCheckboxes = (
             updateSubjectVisualState(parentContainer, id, coursedSubjects, approvedSubjects);
         }
         approvedSubjects[id] = approvedCheck.checked;
+        storageData(coursedSubjects,approvedSubjects)
         updateSubjectVisualState(parentContainer, id, coursedSubjects, approvedSubjects);
     })
 
@@ -40,6 +50,10 @@ export const createSubjectCheckboxes = (
     
     coursedCheck.checked = !!coursedSubjects[id];
     coursedCheck.addEventListener("change",()=>{
+        if(checkApprovedCoursed(subject,coursedSubjects,approvedSubjects)){
+            alert(checkApprovedCoursed(subject,coursedSubjects,approvedSubjects)) //Cambiar luego por alerta personalizada
+            coursedCheck.checked=false
+        }
         if(!coursedCheck.checked){
             approvedCheck.checked = false;
             approvedSubjects[id] = false;
@@ -47,6 +61,7 @@ export const createSubjectCheckboxes = (
             updateSubjectVisualState(parentContainer, id, coursedSubjects, approvedSubjects)
         }
         coursedSubjects[id] = coursedCheck.checked;
+        storageData(coursedSubjects,approvedSubjects)
         updateSubjectVisualState(parentContainer, id, coursedSubjects, approvedSubjects);
     })
 

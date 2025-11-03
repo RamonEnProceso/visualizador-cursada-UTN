@@ -1,8 +1,8 @@
 import { animationHidden } from "../styles/animations";
+import { storageUILoad, storageUI } from "../helpers/storageHelpers";
 
-export let durationOffState = false;
-let buttonOffState = false;
-
+export let durationOffState = storageUILoad("duration")  === true;
+export let buttonOffState = storageUILoad("buttonOff")  === true;
 
 export const changeCareersSize = (tableContainer:HTMLElement) =>{
     const count = tableContainer.children.length;
@@ -14,13 +14,16 @@ export const changeCareersSize = (tableContainer:HTMLElement) =>{
     }
 }
 
-export const buttonOff = (input:HTMLInputElement) =>{
+export const buttonOff = (input : HTMLInputElement) =>{
+    buttonOffState = input.checked;
+    storageUI("buttonOff",buttonOffState)
+    buttonOffUpdate()
+}
+
+export const buttonOffUpdate = () =>{
     const inputCheckboxes = document.querySelectorAll<HTMLElement>(".checkbox_label");
     const selectSubject = document.querySelectorAll<HTMLElement>(".subject_select");
-    const spanElective = document.querySelectorAll<HTMLElement>(".span_elective");
     const selectDuration = document.querySelectorAll<HTMLElement>(".duration_select");
-
-    buttonOffState = input.checked;
 
     inputCheckboxes.forEach(cb=>{
         animationHidden(cb, buttonOffState)
@@ -35,10 +38,16 @@ export const buttonOff = (input:HTMLInputElement) =>{
 }
 
 export const durationOff = (input:HTMLInputElement) => {
-    const durationDivs = document.querySelectorAll<HTMLElement>(".content_duration");
-    
     durationOffState = input.checked;
+    storageUI("duration",durationOffState)
+    const durationDivs = document.querySelectorAll<HTMLElement>(".content_duration");
+    durationDivs.forEach(dv=>{
+        animationHidden(dv, durationOffState)
+    })
+}
 
+export const durationOffUpdate = ()=>{
+    const durationDivs = document.querySelectorAll<HTMLElement>(".content_duration");
     durationDivs.forEach(dv=>{
         animationHidden(dv, durationOffState)
     })

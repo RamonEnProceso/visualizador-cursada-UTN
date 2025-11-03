@@ -3,7 +3,7 @@ import { createDomElement } from '../helpers/domHelpers';
 import { renderSubjects } from './renderSubjects';
 import {animationGsapTable} from '../styles/animations'
 import { electiveNumberReset } from '../helpers/storageHelpers';
-import { changeCareersSize } from '../logic/uiToggles';
+import { changeCareersSize, durationOffUpdate, buttonOffUpdate } from '../logic/uiToggles';
 
 export const renderCareer = (
     careerId : string, 
@@ -22,24 +22,25 @@ export const renderCareer = (
 
     header.textContent = careersArray[careerId]["name"];
 
-    //Hasta acá, lee el objeto de la carrera correspondiente 
-
     container.replaceChildren();
 
     const careerLevels = careersArray[careerId]["levels"];
     let numLevels : number = 0;
     let electiveNumber = 0;
 
-    //Crea el select de las diferentes electivas
     const electivesSelect = createDomElement("select","elective","elective-select");
 
     electiveNumberReset();
+
+    
+    const optionNone = createDomElement("option","",undefined, "-- Selecciona una materia --");
+    optionNone.value = "";
+    electivesSelect.appendChild(optionNone)
 
     careerLevels.forEach((level : Level)=>{
         
         const levelName = level.name;
 
-        //Itero entre materias electivas y lo coloco en el select
         if (levelName == "Electives"){
             level.subjects.forEach((subject : Subject)=>{
                 const option = createDomElement("option","",undefined,subject.name);
@@ -49,15 +50,11 @@ export const renderCareer = (
             return
         }
 
-        //Acá se crea la columna y el header
         const levelHtml =  createDomElement("div","content_column");
         const headerHtml = createDomElement("div","content_header",undefined,levelName)
         levelHtml.appendChild(headerHtml);
         numLevels++;
 
-        
-
-        //Acá se crean las distintas materias
         level.subjects.forEach((subject : Subject)=>{
             renderSubjects(subject,careerId,levelHtml,electivesSelect,careersArray,coursedSubjects,approvedSubjects,chosenElectives)
         })
@@ -66,10 +63,8 @@ export const renderCareer = (
         
 
         container.appendChild(levelHtml);
-        //changeCareersSize();
     })
     changeCareersSize(container)
-    //clearFilters();
-    //inputDurationOff.checked = true;
-    //durationOff();
+    durationOffUpdate()
+    buttonOffUpdate()
 }

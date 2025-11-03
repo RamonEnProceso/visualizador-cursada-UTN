@@ -1,6 +1,8 @@
 import { Career } from "../interfaces/career";
 import { renderCareer } from "./renderCareers";
-import { clearFilters } from "../logic/filters";
+import { storageCareerSelected } from "../helpers/storageHelpers";
+
+export let careerSelected = localStorage.getItem("career") || "sistemas";
 
 export const renderButtons = (
     buttonContainer : HTMLElement,
@@ -28,7 +30,8 @@ export const renderButtons = (
         lb.className = "career_label";
         rd.addEventListener("click", () =>{
             renderCareer(careerKey,careersArray,header,table,coursedSubjects,approvedSubjects,chosenElectives)
-            clearFilters(inputsFiltersButton);
+            careerSelected = careerKey;
+            storageCareerSelected(careerSelected);
         })
         li.appendChild(rd);
         li.appendChild(lb);

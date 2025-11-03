@@ -1,5 +1,6 @@
 import { Career, Subject } from "../../interfaces/career";
 import { createDomElement } from "../../helpers/domHelpers";
+import { checkId } from "../../logic/checkApprovedCoursed";
 
 export const renderSubjectRequirements = (
     subject : Subject,
@@ -18,16 +19,12 @@ export const renderSubjectRequirements = (
     const userNotTaken : string[] = [];
     const userNotApproved : string[] = [];
 
-    const checkId = (id:string, object:Record<string, boolean>) =>{
-        return !!object[id];
-    }
-
     subjectTaken?.forEach((id)=>{
         if (!checkId(id,coursedSubjects)){
             userNotTaken.push(id)
         }
         const takenDiv = document.getElementById(`${id}-div`) as HTMLElement;
-        takenDiv.classList.add("focus");
+        takenDiv?.classList.add("focus");
         parentDiv.addEventListener("mouseleave",()=>{
             takenDiv.classList.remove("focus")
         })
@@ -38,7 +35,7 @@ export const renderSubjectRequirements = (
             userNotApproved.push(id)
         }
         const approvedDiv = document.getElementById(`${id}-div`) as HTMLElement;
-        approvedDiv.classList.add("focus")
+        approvedDiv.classList.add("focus");
         parentDiv.addEventListener("mouseleave",()=>{
             approvedDiv.classList.remove("focus")
         })
