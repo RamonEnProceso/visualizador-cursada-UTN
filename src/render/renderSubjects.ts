@@ -17,7 +17,7 @@ export const renderSubjects = (
     approvedSubjects : Record<string, boolean>, 
     chosenElectives : Record<string, string[]>) =>{
 
-    const div = createDomElement("div", "content_subjects none");
+    const div = createDomElement("div", "content_subjects none", `${subject.id}-div`);
     const divSpan = createDomElement("span","content_name",undefined,subject.name)
     div.appendChild(divSpan);
 
@@ -135,7 +135,7 @@ export const renderSubjects = (
         subjectId.style.opacity = "1";
 
         div.appendChild(divSubjectsRequirements);
-        renderSubjectRequirements(subject,divSubjectsRequirements, approvedSubjects, coursedSubjects)
+        renderSubjectRequirements(subject,div,divSubjectsRequirements, coursedSubjects, approvedSubjects)
         
         divSubjectsRequirements.style.opacity = "0";
         void divSubjectsRequirements.offsetWidth;
@@ -145,7 +145,7 @@ export const renderSubjects = (
     div.addEventListener("mouseleave",()=>{
         div.removeChild(subjectId)
         divSubjectsRequirements.innerHTML="";
-        div.removeChild(divSubjectsRequirements)
+        divSubjectsRequirements.remove()
     })
 
 

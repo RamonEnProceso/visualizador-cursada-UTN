@@ -40,3 +40,22 @@ export const animationGsapTable = (
     })
 
 }
+
+export const animationHidden = (
+    el : HTMLElement,
+    value : boolean
+) =>{
+    if(value){
+        gsap.to(el,{opacity:0,duration:0.3, ease:"power3.out"})
+        setTimeout(()=>{if (value){
+            el.classList.add("hidden")}
+        }, 150)
+    }else{
+        el.classList.remove("hidden")
+        gsap.to(el,{opacity:1,duration:0.5, ease: "power3.out"})
+    }
+}
+
+export const textAnimation = (textDiv:HTMLElement)=>{
+    
+}

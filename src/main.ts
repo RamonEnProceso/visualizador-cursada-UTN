@@ -28,7 +28,7 @@ window.addEventListener('resize', () => changeCareersSize(tableContainer));
 window.addEventListener('load', () => changeCareersSize(tableContainer));
 
 inputButtonOff.addEventListener("change", ()=>{
-    buttonOff();
+    buttonOff(inputButtonOff);
 })
 
 inputOnlyCoursed.addEventListener("change",()=>{
@@ -40,7 +40,7 @@ inputDarkNotApproved.addEventListener("change",()=>{
 })
 
 inputDurationOff.addEventListener("change", () =>{
-    durationOff(inputButtonOff);
+    durationOff(inputDurationOff);
 })
 
 careerButtonsRender(careerOrder, careersData, nameContainer, tableContainer,coursedSubjects,approvedSubjects,chosenElectives,buttonContainer,inputsFiltersButton);

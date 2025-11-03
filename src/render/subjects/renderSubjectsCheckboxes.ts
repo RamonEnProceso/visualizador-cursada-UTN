@@ -14,6 +14,7 @@ export const createSubjectCheckboxes = (
     const approvedCheck = createDomElement("input","checkbox",`${id}-approved`);
     approvedCheck.type="checkbox";
 
+    approvedCheck.checked = !!approvedSubjects[id];
     approvedCheck.addEventListener("change",()=>{
         if(approvedCheck.checked){
             confetti({
@@ -21,12 +22,10 @@ export const createSubjectCheckboxes = (
             });
             coursedCheck.checked = true;
             coursedSubjects[id] = true;
-            updateSubjectVisualState(coursedCheck, parentContainer);
+            updateSubjectVisualState(parentContainer, id, coursedSubjects, approvedSubjects);
         }
         approvedSubjects[id] = approvedCheck.checked;
-        updateSubjectVisualState(approvedCheck,parentContainer);
-        //darkNotApproved();
-        //console.log(approvedSubjects)
+        updateSubjectVisualState(parentContainer, id, coursedSubjects, approvedSubjects);
     })
 
     const approvedLabel = createDomElement("label","checkbox_label",undefined,"Aprobado");
@@ -38,26 +37,25 @@ export const createSubjectCheckboxes = (
 
     const coursedLabel = createDomElement("label", "checkbox_label", undefined, "Cursado");
     coursedLabel.htmlFor = `${id}-coursed`
-                
-    coursedSubjects[id] = coursedCheck.checked;
-
+    
+    coursedCheck.checked = !!coursedSubjects[id];
     coursedCheck.addEventListener("change",()=>{
         if(!coursedCheck.checked){
             approvedCheck.checked = false;
             approvedSubjects[id] = false;
             parentContainer
-            //updateSubjectVisualState(approvedCheck);
-            }
-            coursedSubjects[id] = coursedCheck.checked;
-            //updateSubjectVisualState(coursedCheck);
-            //darkNotApproved();
-            updateSubjectVisualState(coursedCheck,parentContainer);
-        })
+            updateSubjectVisualState(parentContainer, id, coursedSubjects, approvedSubjects)
+        }
+        coursedSubjects[id] = coursedCheck.checked;
+        updateSubjectVisualState(parentContainer, id, coursedSubjects, approvedSubjects);
+    })
 
-        divButtons.appendChild(coursedCheck);
-        divButtons.appendChild(coursedLabel);
-        divButtons.appendChild(approvedCheck);
-        divButtons.appendChild(approvedLabel)
+    divButtons.appendChild(coursedCheck);
+    divButtons.appendChild(coursedLabel);
+    divButtons.appendChild(approvedCheck);
+    divButtons.appendChild(approvedLabel)
 
     dv.appendChild(divButtons);
+
+    updateSubjectVisualState(parentContainer, id, coursedSubjects, approvedSubjects)
 }
