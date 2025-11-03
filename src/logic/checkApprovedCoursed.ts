@@ -36,9 +36,9 @@ export const checkApprovedCoursed = (
             textNotTaken = `Falta cursar: \n${userNotTaken}\n`;
         }
         if(userNotApproved.length>0){
-            textNotApproved = `\nFalta cursar: \n${userNotApproved}\n`;
+            textNotApproved = `\nFalta aprobar: \n${userNotApproved}\n`;
         }
-        return textNotTaken+textNotApproved
+        return `Aún no desbloqueada:\n${textNotTaken+textNotApproved}`
     }
     return false
 }
