@@ -4,11 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visualizador de Materias - UTN.BA</title>
-    <link rel="icon" href="/icons/logo.webp" sizes="32x32">
+    <link rel="icon" href="/icons/logo.svg" sizes="32x32">
 </head>
-<body>
-    <div class="title" id="title">
-        <img id="title_logo" class="bouncing" src="/icons/logo.webp">
+<body class="loading ">
+
+    <div class="loading-container" id="loading">
+        <div class="loader"></div>
+        <img class="loader_img" src="/icons/logo.svg">
+        <p id="loader-p">Cargando página...</p>
+    </div>
+
+    <div class="alert_container" id="alert-container">
+        <div class="alert_box">
+        <div class="alert_img">
+            <img  src="/icons/logo.svg">
+        </div>
+        <p id="alert-p"><span class="alert_h">Alerta</span><span class="alert_error">No se ha terminado de cursar:</span></p>
+        <button id="alert-button">Cerrar</button>
+        </div>
+    </div>
+
+
+    <main>
+        <div class="title" id="title">
+        <img id="title_logo" class="bouncing" src="/icons/logo.svg">
         <h1>UTN.<span style="color: var(--second_color)">BA</span> - Visualizador de Materias</h1>
     </div>
 
@@ -44,7 +63,7 @@
     
     <footer>Este es un proyecto independiente, creado como práctica. No afiliado oficialmente a la Universidad Tecnológica Nacional ni a la Facultad Regional Buenos Aires.</footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
    <script type="module" src="/src/main.ts"></script>
+    </main>
 </body>
 </html>

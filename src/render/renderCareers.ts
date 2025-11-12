@@ -12,7 +12,9 @@ export const renderCareer = (
     container : HTMLElement, 
     coursedSubjects : Record<string, boolean>, 
     approvedSubjects : Record<string, boolean>, 
-    chosenElectives : Record<string, string[]>) =>{
+    chosenElectives : Record<string, string[]>,
+    textAlert:HTMLElement
+    ) =>{
 
     const career = careersArray[careerId];
     
@@ -56,7 +58,7 @@ export const renderCareer = (
         numLevels++;
 
         level.subjects.forEach((subject : Subject)=>{
-            renderSubjects(subject,careerId,levelHtml,electivesSelect,careersArray,coursedSubjects,approvedSubjects,chosenElectives)
+            renderSubjects(subject,careerId,levelHtml,electivesSelect,careersArray,coursedSubjects,approvedSubjects,chosenElectives, textAlert)
         })
 
         container.style.gridTemplateColumns = `repeat(${numLevels}, 1fr)`

@@ -16,7 +16,8 @@ export const renderSubjects = (
     careersArray: Record<string, Career>,
     coursedSubjects : Record<string, boolean>,  
     approvedSubjects : Record<string, boolean>, 
-    chosenElectives : Record<string, string[]>) =>{
+    chosenElectives : Record<string, string[]>,
+    textAlert:HTMLElement) =>{
 
     const div = createDomElement("div", "content_subjects none", `${subject.id}-div`);
     const divSpan = createDomElement("span","content_name",undefined,subject.name)
@@ -104,7 +105,7 @@ export const renderSubjects = (
 
             renderSubjectDuration(selectedElective, selectedElective.duration?.[0].name ?? "", electiveDuration)
             electiveDuration.style.display = "inline-block"
-            createSubjectCheckboxes(divElective,subject,chosen, coursedSubjects, approvedSubjects, div);
+            createSubjectCheckboxes(divElective,subject,chosen, coursedSubjects, approvedSubjects, div, textAlert);
 
 
         }
@@ -151,7 +152,7 @@ export const renderSubjects = (
 
             renderSubjectDuration(selectedElective, selectedElective.duration?.[0].name ?? "", electiveDuration)
             electiveDuration.style.display = "inline-block"
-            createSubjectCheckboxes(divElective,subject,chosen, coursedSubjects, approvedSubjects, div);
+            createSubjectCheckboxes(divElective,subject,chosen, coursedSubjects, approvedSubjects, div, textAlert);
 
         })
         div.appendChild(divElective)
@@ -163,7 +164,7 @@ export const renderSubjects = (
     levelHtml.appendChild(div);
 
     if (!subject.elective){
-         createSubjectCheckboxes(div,subject,subject.id, coursedSubjects, approvedSubjects, div);
+         createSubjectCheckboxes(div,subject,subject.id, coursedSubjects, approvedSubjects, div, textAlert);
     }
 
 

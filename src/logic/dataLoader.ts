@@ -13,12 +13,13 @@ const loadCareer = async (
   approvedSubjects: Record<string, boolean>,
   chosenElectives: Record<string, string[]>,
   buttonContainer: HTMLElement,
-  inputsFiltersButton : HTMLInputElement[]
+  inputsFiltersButton : HTMLInputElement[],
+  textAlert:HTMLElement
 ) => {
     const curriculum = await fetch(file);
     careersData[name] = await curriculum.json();
-    renderCareer(name,careersData,nameContainer,tableContainer,coursedSubjects,approvedSubjects,chosenElectives)
-    renderButtons(buttonContainer, careersData, nameContainer, tableContainer,coursedSubjects,approvedSubjects,chosenElectives, inputsFiltersButton);
+    renderCareer(name,careersData,nameContainer,tableContainer,coursedSubjects,approvedSubjects,chosenElectives, textAlert)
+    renderButtons(buttonContainer, careersData, nameContainer, tableContainer,coursedSubjects,approvedSubjects,chosenElectives, textAlert);
 };
 
 export const careerButtonsRender = async (
@@ -30,16 +31,17 @@ export const careerButtonsRender = async (
   approvedSubjects: Record<string, boolean>,
   chosenElectives: Record<string, string[]>,
   buttonContainer: HTMLElement,
-  inputsFiltersButton : HTMLInputElement[]
+  inputsFiltersButton : HTMLInputElement[],
+  textAlert:HTMLElement
 ) => {
     for (const career of order){
-        await loadCareer(career, `/data/ingenieria_${career}.json`, careersData, nameContainer, tableContainer, coursedSubjects, approvedSubjects, chosenElectives, buttonContainer, inputsFiltersButton)
+        await loadCareer(career, `/data/ingenieria_${career}.json`, careersData, nameContainer, tableContainer, coursedSubjects, approvedSubjects, chosenElectives, buttonContainer, inputsFiltersButton, textAlert)
     }
-
     const input = document.getElementById(careerSelected) as HTMLInputElement;
     input.checked =true;
+    
     await setTimeout(()=>{
-      renderCareer(careerSelected,careersData,nameContainer,tableContainer,coursedSubjects,approvedSubjects,chosenElectives)
+      renderCareer(careerSelected,careersData,nameContainer,tableContainer,coursedSubjects,approvedSubjects,chosenElectives, textAlert)
     },150)
-
+    
 }

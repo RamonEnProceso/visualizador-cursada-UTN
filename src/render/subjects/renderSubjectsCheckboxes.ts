@@ -3,6 +3,7 @@ import { Subject } from "../../interfaces/career";
 import { updateSubjectVisualState } from "../../state/subjectState";
 import { checkApprovedCoursed } from "../../logic/checkApprovedCoursed";
 import { storageData } from "../../helpers/storageHelpers";
+import { renderAlert } from "../renderAlert";
 import confetti from 'canvas-confetti';
 
 export const createSubjectCheckboxes = (
@@ -11,7 +12,8 @@ export const createSubjectCheckboxes = (
     id : string, 
     coursedSubjects : Record<string, boolean>, 
     approvedSubjects : Record<string, boolean>, 
-    parentContainer:HTMLElement
+    parentContainer:HTMLElement,
+    alertText : HTMLElement
 ) =>{
     const divButtons = createDomElement("div","subject_checkboxes")
 
@@ -20,8 +22,9 @@ export const createSubjectCheckboxes = (
 
     approvedCheck.checked = !!approvedSubjects[id];
     approvedCheck.addEventListener("change",()=>{
-        if(checkApprovedCoursed(subject,coursedSubjects,approvedSubjects)){
-            alert(checkApprovedCoursed(subject,coursedSubjects,approvedSubjects)) //Cambiar luego por alerta personalizada
+        const result = checkApprovedCoursed(subject,coursedSubjects,approvedSubjects);
+        if(result !== false){
+            renderAlert(alertText, "No se puede aprobar", result)
             approvedCheck.checked=false;
             coursedCheck.checked=false;
         }
@@ -50,8 +53,9 @@ export const createSubjectCheckboxes = (
     
     coursedCheck.checked = !!coursedSubjects[id];
     coursedCheck.addEventListener("change",()=>{
-        if(checkApprovedCoursed(subject,coursedSubjects,approvedSubjects)){
-            alert(checkApprovedCoursed(subject,coursedSubjects,approvedSubjects)) //Cambiar luego por alerta personalizada
+        const result = checkApprovedCoursed(subject,coursedSubjects,approvedSubjects);
+        if(result !== false){
+            renderAlert(alertText, "No se puede cursar", result)
             coursedCheck.checked=false
         }
         if(!coursedCheck.checked){

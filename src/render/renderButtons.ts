@@ -12,7 +12,7 @@ export const renderButtons = (
     coursedSubjects : Record<string, boolean>, 
     approvedSubjects : Record<string, boolean>, 
     chosenElectives : Record<string, string[]>,
-    inputsFiltersButton : HTMLInputElement[]
+    textAlert:HTMLElement
     ) =>{
     buttonContainer.replaceChildren();
 
@@ -29,7 +29,7 @@ export const renderButtons = (
         lb.htmlFor = careerKey;
         lb.className = "career_label";
         rd.addEventListener("click", () =>{
-            renderCareer(careerKey,careersArray,header,table,coursedSubjects,approvedSubjects,chosenElectives)
+            renderCareer(careerKey,careersArray,header,table,coursedSubjects,approvedSubjects,chosenElectives, textAlert)
             careerSelected = careerKey;
             storageCareerSelected(careerSelected);
         })

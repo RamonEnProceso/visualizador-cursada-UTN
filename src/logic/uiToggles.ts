@@ -7,7 +7,7 @@ export let buttonOffState = storageUILoad("buttonOff")  === true;
 export const changeCareersSize = (tableContainer:HTMLElement) =>{
     const count = tableContainer.children.length;
     const width = window.innerWidth;
-    if (width < 895){
+    if (width < 950){
         tableContainer.style.gridTemplateColumns = `repeat(2, 1fr)`
     } else{
         tableContainer.style.gridTemplateColumns = `repeat(${count}, 1fr)`
