@@ -26,8 +26,8 @@ Aplicación web interactiva que permite **visualizar, simular y gestionar el ava
 - ✅ Modularizar código
 - ✅ Agregar visualizar correlatividades
 - ✅ Agregar guardado local
+- ✅ Agregar pantalla de carga
 - 🔄 Mejorar interfaz Mobile
-- 🔄 Agregar pantalla de carga
 
 ## 🎯 Objetivo
 
@@ -36,7 +36,6 @@ Convertirlo en un **simulador de cursada** que permita:
 1. Marcar materias cursadas/aprobadas
 2. Ver restricciones y correlatividades
 3. Tener un seguimiento visual del avance académico
-4. Permitir agregar planes de estudio de diferentes universidades
 
 ---
 

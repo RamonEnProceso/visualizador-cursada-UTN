@@ -708,6 +708,20 @@ footer {
         color:var(--text_principal_color)
     }
 
+    .subject_checkboxes{
+        width: 100%;
+        display: flex;
+        justify-content: space-between
+
+
+    }
+
+    .subject_checkboxes label{
+        width: 44%;
+        text-align: center;
+        padding: 5px;
+    }
+
 }
 
 
